@@ -45,10 +45,6 @@ textarea {
 
 body {
     display: flex;
-    background-image: url(../img/23A3CDEF-77A8-4501-8B5D-FF1C9A0910E3.JPG);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 160%;
     flex-direction: column;
 }
 
@@ -57,17 +53,14 @@ body {
 header {
   padding: 0;
   margin-top: 0;
-}
-
-header .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-image: url(../img/23A3CDEF-77A8-4501-8B5D-FF1C9A0910E3.JPG);
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .header-divider {
   width: 83%;
-  height: 2px;
+  height: x;
   background: white;
 }
 
@@ -85,6 +78,7 @@ header h3 a {
 header nav ul {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 header nav ul li {
@@ -101,9 +95,6 @@ header nav ul li a {
 }
 
 /*------------------------Main Section------------------------*/
-main {
-
-}
 
 .content-wrapper div {
     flex-direction: row;
@@ -112,9 +103,16 @@ main {
     padding-right: 25px;
 }
 
+main p {
+  font-family: 'Kaisei HarunoUmi', serif;
+  text-align: justify;
+  font-size: 1.2em;
+  font-weight: light;
+  line-height: 35px;
+}
+
 .title-section {
-    margin-top: 280px;
-    margin-bottom: 213px;
+    background-image: url(../img/23A3CDEF-77A8-4501-8B5D-FF1C9A0910E3.JPG);
 }
 
 .title-section h1 {
@@ -122,6 +120,8 @@ main {
     text-align: center;
     color: white;
     font-size: 3em;
+    margin-top: 280px;
+    margin-bottom: 213px;
     margin-bottom: 0;
 }
 
@@ -132,13 +132,6 @@ main {
     font-size: 1.2em;
 }
 
-main p {
-  font-family: 'Kaisei HarunoUmi', serif;
-  text-align: justify;
-  font-size: 1.3em;
-  font-weight: light;
-}
-
 .statement-of-work {
   background: rgb(230, 221, 213);
   border: 9px solid white;
@@ -147,8 +140,8 @@ main p {
 }
 .statement-of-work h2{
   font-family: 'Bodoni Moda', serif;
-  font-size: 2em;
-  line-height: 60px;
+  font-size: 1.8em;
+  line-height: 55px;
 }
 
 .gallery-image {
@@ -156,8 +149,8 @@ main p {
 }
 
 .gallery-image img {
-  height: 440px;
-  width: 100%;
+  position: relative;
+  size: auto;
 }
 
 .lets-chat {
@@ -177,35 +170,91 @@ main p {
 }
 
 .lets-chat button {
-  background: rgb(215, 196, 199);
+  background: rgb(233, 213, 216);
   border: 1px solid black;
   font-family: 'Bodoni Moda', serif;
   font-size: 1.2em;
-  width: 80%;
-  height: 50px;
+  width: 100%;
+  height: 65px;
   margin: 30px 0px;
 }
 
 /*------------------------Footer------------------------*/
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:rgb(230, 221, 213);
+}
 
+footer h2 {
+  font-family: 'Bodoni Moda', serif;
+}
+
+footer address {
+  font-family: 'Bodoni Moda', serif;
+  font-style: normal;
+  text-align: center;
+  line-height: 30px;;
+}
+
+.social-links {
+  width: 100%;
+}
+
+.social-links ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+.social-links ul li a {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+/*-------------------------------------Additional Pages----------------------------------*/
+
+/*------------------------About------------------------*/
+
+.page-title {
+  background:rgb(128, 133, 126);
+  font-family: 'Shippori Mincho', serif;
+  text-align: center;
+  color: white;
+  font-size: 2.2em;
+  margin-top: 280px;
+  margin-bottom: 213px;
+  margin-bottom: 0;
+}
+
+.about-headshot img {
+  width: 300px;
+
+}
+
+/*------------------------Projects------------------------*/
+
+/*------------------------Contact------------------------*/
 
 /*----------------------------------------------------------------
 --------------------------Media Queries--------------------------
 ----------------------------------------------------------------*/
 
-@media screen and (min-width: 589px) {
+@media (min-width: 640px) {
   
     
   }
-
   header {
     padding: 33px 0;
   }
 
   header .content-wrapper {
-    width: 100%;
-    justify-content: space-between;
+    flex-direction: row;
   }
 
   header nav {
@@ -217,7 +266,6 @@ main p {
   }
 
   header nav ul li a {
-
     font-size: .9em;
     margin: 0;
     padding: 0;
