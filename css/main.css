@@ -1,20 +1,22 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+
+/*------------------------Global------------------------*/
 
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
 }
 
 audio,
@@ -26,66 +28,236 @@ video {
   vertical-align: middle;
 }
 
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+ul {
+  list-style: none;
 }
 
-textarea {
-  resize: vertical;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-/*----------------------------------------------------------------
---------------------------Mobile Styles--------------------------
-----------------------------------------------------------------*/
-
-
-/*------------------------Global------------------------*/
-
-body {
+h1, h2, h3, h4 {
+  color: white;
 }
 
 .background-container{
-  background-image: url(../img/23A3CDEF-77A8-4501-8B5D-FF1C9A0910E3.JPG);
+  height: 150vh;
+  background-image: url(/img/MarshfieldHome-11.jpg);
+  background-color: white;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center center;
+  width: 100%;
+  margin: 2rem;
 }
+
 
 /*------------------------Header------------------------*/
 
-header {
-  padding: 15px 0;
+/*-- Navigation --*/
+
+.navigation__checkbox {
+  display: none;
+}
+
+.navigation__button {
+  background-color: rgba(255, 255, 255, 0.215);
+  height: 2.9rem;
+  width: 2.9rem;
+  position: fixed;
+  top: 5%;
+  right: 12%;
+  border-radius: 50%;
+  z-index: 2000;
+  font-family: 'Nanum Myeongjo', serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navigation__background {
+  height: 4.3rem;
+  width: 4.3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: white;
+  z-index: 1000;
+  transition: transform .1s;
+}
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgb(196, 213, 208);
+  opacity: 0;
+  width: 0;
+  transition: all .7s;
+}
+
+.hidden {
+  display: none;
+}
+
+.navigation__list {
+  position: absolute;
+  top: 42%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-right: 30px;
+  z-index: 100;
+}
+
+.navigation__item {
+  margin: 3rem;
+}
+
+.navigation__link:link, 
+.navigation__link:visited {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+  font-family: 'Raleway', sans-serif;
+  border-bottom: .8px solid rgb(113, 114, 107);
+  letter-spacing: 5.5px;
+  background-size: 220%;
+  transition: all 1.4s;
+  animation-name: moveInRight;
+  animation-duration: 4s;
+}
+
+.navigation__link:hover, 
+.navigation__link:active {
+  color: black;
+  background: white;
+  background-position: 100%;
+}
+
+.navigation__checkbox:checked ~ .navigation__background {
+transform: scale(80);
+}
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+}
+
+/*-- Icon --*/
+
+.navigation__icon{
+  position: relative;
+  top: 17%;
+}
+
+.navigation__icon {
+  height: 1px;
+  background-color: black;
+  display: inline-block;
+  transition: all .4s;
+}
+
+.navigation__icon::before, 
+.navigation__icon::after {
+  height: 1px;
+  background-color: black;
+  display: inline-block;
+  transition: all .4s;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 1.5rem;
+}
+
+.navigation__icon::before, 
+.navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.navigation__icon::before {
+  top: -.48rem;
+}
+
+.navigation__icon::after {
+  top: .48rem;
+  height: 1px;
+}
+
+.navigation__button:hover .navigation__icon,
+.navigation__button:hover .navigation__icon::before,
+.navigation__button:hover .navigation__icon::after {
+  width: 1.4rem;
+  background-color: rgb(248, 243, 243); 
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  transform: rotate(-135deg);
+  top: 0;
+}
+
+/*-- Logo & Header --*/
+
+.content-wrapper {
+  padding-left: 5%;
+  padding-top: 15px;
   text-align: center;
 }
 
-.header-divider {
-  border: none;
-  background: white;
-  height: 1px;
-  width: 85%;
+.logo {
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  padding: 5px 10px 5px 5px;
+  margin: 0;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  z-index: 9000;
 }
 
 header h3 {
-  text-align: center;
+  text-align: start;
+  padding: 0;
+  margin: 0;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  z-index: 9000;
 }
 
 header h3 a {
-    font-family: 'Kaisei HarunoUmi', serif;
-    color: white;
-    text-decoration: none;
-    font-size: 1.3em;
+  font-family: 'Ysabeau', sans-serif;
+  color: black;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 0;
 }
 
 .nav-option {
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .nav-option:hover {
-  font-size: 1.1em;
-  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 header nav ul {
@@ -95,26 +267,104 @@ header nav ul {
 }
 
 header nav ul li {
-    font-family: 'Buda', cursive;
-    font-size: 1.5em;
-    list-style: none;
-    display: inline;
-    padding: 10px 15px 20px 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  list-style: none;
+  display: inline;
+  padding: 10px 15px 20px 15px;
+}
+
+header nav ul li:hover {
+  color: rgb(255, 255, 255);
 }
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.786);
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+/*-- Main Header --*/
+
+header {
+  padding: 15px 0;
+  text-align: center;
+  margin: 0;
+}
+
+.header-divider {
+  border: none;
+  background: transparent;
+  height: 1px;
+  width: 80%;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+.title-section {
+  margin-top: 100px;
+  margin-bottom: 250px;
+}
+
+.heading-primary-main {
+    display: block;
+    text-align: center;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 4rem;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    padding-bottom: 220px;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+}
+
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight{
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInUp{
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
 }
 
 /*------------------------Main Section------------------------*/
-
-.content-wrapper div {
-    flex-direction: row;
-    align-items: center;
-    padding-left: 25px;
-    padding-right: 25px;
-}
 
 main p {
   font-family: 'Kaisei HarunoUmi', serif;
@@ -124,131 +374,406 @@ main p {
   line-height: 35px;
 }
 
-.title-section {
-  margin-top: 100px;
-  margin-bottom: 250px;
+.home-page-statement {
+  margin: 3rem 10rem;
+  padding-right: 11rem;
+  text-align: center;
+  animation-name: fadeIn;
+  animation-duration: 4s;
 }
 
-.title-section h1 {
-    font-family: 'Shippori Mincho', serif;
-    text-align: center;
-    color: white;
-    font-size: 3em;
-}
-
-.title-section h2 {
-    font-family: 'Shippori Mincho', serif;
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-}
-
-.statement-of-work {
-  background: rgb(230, 221, 213);
-  border: 9px solid white;
-  padding: 25px 25px 30px 25px;
-  margin-top: 0;
-}
-.statement-of-work h2{
-  font-family: 'Bodoni Moda', serif;
-  font-size: 1.8em;
-  line-height: 55px;
-}
-
-.gallery-image {
-  height: 450px;
-}
-
-.gallery-image img {
-  position: relative;
-  size: auto;
-}
-
-.lets-chat {
-  background: rgb(128, 133, 126);
-  padding: 25px 25px 30px 25px;
-  border: 9px solid white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-
-.lets-chat h2 {
-  font-family: 'Bodoni Moda', serif;
+.home-page-statement h2 {
+  color: #1E1E1E;
+  font-family: 'Abhaya Libre', serif;
+  font-size: 3rem;
   font-weight: lighter;
-  font-size: 2.2em;
+  letter-spacing: 1.2px;
+  text-align: left;
 }
 
-.lets-chat button {
-  background: rgb(233, 213, 216);
-  border: 1px solid black;
-  font-family: 'Bodoni Moda', serif;
-  font-size: 1.2em;
-  width: 100%;
-  height: 65px;
-  margin: 30px 0px;
+.decorative-statement {
+  font-family: 'Antic Didone', serif;
+  color: #908A79;
+  font-size: 4rem;
+  letter-spacing: 1.5px;
+}
+
+.homepage-main-three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+.homepage-main-three h3 {
+  color: #FFF;
+  font-size: 4rem;
+  font-family: Antic Didone;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 0;
+  margin: 2rem 0 0 2rem;
+}
+
+.homepage-main-three p {
+  padding: 1rem 2rem .5rem 2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  line-height: 2.1rem;
+}
+
+/*-- ABOUT MAIN 1--*/
+
+.brown-block-behind {
+  background: #a9a497;
+  width: 30rem;
+  height: 33rem;
+  flex-shrink: 0;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+
+.homepage-about-text {
+  background: #d2d1c7;
+  width: 31rem;
+  height: 25rem;
+  position: absolute;
+  left: 18%;
+  padding: 0;
+}
+
+.homepage-about-image img {
+  width: 27rem;
+  height: auto;
+  flex-shrink: 0;
+  animation-name: moveInUp;
+  animation-duration: 4s;
+}
+
+/*-- PROJECT MAIN 2 --*/
+
+.beige-block-behind {
+  background: #DDDCCB;
+  width: 28rem;
+  height: 28rem;
+  flex-shrink: 0;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  position: relative;
+}
+
+.homepage-project-text {
+  background: #bfbaac;
+  width: 30rem;
+  height: 25rem;
+  position: absolute;
+  right: 5%;
+  padding: 0;
+}
+
+.homepage-project-image img {
+  width: 40rem;
+  height: auto;
+  flex-shrink: 0;
+  animation-name: moveInUp;
+  animation-duration: 4s;
+  position: relative;
+  text-align: left;
+}
+
+/*-- CONTACT MAIN 2 --*/
+
+.camel-block-behind {
+  background: #e7e7e3;
+  width: 34rem;
+  height: 28rem;
+  flex-shrink: 0;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  position: relative;
+}
+
+.homepage-contact-text {
+  background: #c8c7bf;
+  width: 28rem;
+  height: 22rem;
+  position: absolute;
+  left: 16%;
+  padding: 0;
+}
+
+.homepage-contact-image img {
+  width: 27rem;
+  height: auto;
+  flex-shrink: 0;
+  animation-name: moveInUp;
+  animation-duration: 4s;
+  position: relative;
+  text-align: left;
 }
 
 /*------------------------Footer------------------------*/
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background:rgb(230, 221, 213);
-}
-
-footer h2 {
-  font-family: 'Bodoni Moda', serif;
-}
-
-footer address {
-  font-family: 'Bodoni Moda', serif;
-  font-style: normal;
+  color: white;
   text-align: center;
-  line-height: 30px;;
+  line-height: 15px;
+  font-family: 'Nanum Myeongjo', serif;
+  padding-bottom: 12px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:rgb(179, 192, 190);
+  border-top: 5px solid white;
 }
 
-.social-links {
-  width: 100%;
+footer h4 {
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
-.social-links ul {
+footer h5 {
+  font-size: 14px;
+}
+
+.social-icons ul {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  width: 100%;
+  margin: 0;
+  padding: 20px 0 0 0;
 }
 
-.social-links ul li a {
-  padding: 0 10px;
+.social-icons li {
+  padding: 12px 12px 5px 12px;
+  font-size: 25px;
+}
+
+.social-icons li :hover {
+  color: rgb(177, 171, 171);
+}
+
+footer a {
+  color: white;
   text-decoration: none;
 }
+
+footer h5 :hover {
+  color: rgb(200, 193, 193);
+}
+
 
 /*-------------------------------------Additional Pages----------------------------------*/
 
 /*------------------------About------------------------*/
 
-.page-title {
-  background:rgb(128, 133, 126);
+.page-title h1 {
   font-family: 'Shippori Mincho', serif;
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 2.2em;
-  margin-top: 280px;
-  margin-bottom: 213px;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  animation-name: 'moveInLeft' 2s;
 }
 
-.about-headshot img {
-  width: 300px;
+.content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
+.text-section p {
+  line-height: 1.8rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.text-section h4 {
+  color: black;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-section img {
+  cursor: none;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  transform: scale(.65);
+  object-fit: contain;
+}
+
+.photo-section div {
+  padding: 0;
+  margin: 0;
 }
 
 /*------------------------Projects------------------------*/
+
+
+.gray-button {
+  background: rgba(161, 177, 172, 0.447);
+}
+
+.page-title h1 {
+  padding: 0;
+  margin: 0;
+}
+
+/*-- Image Gallery --*/
+
+.gallery {
+  margin: 0 35px 0 35px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+.project-header {
+  margin-top: 15px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+.project-collection {
+  margin: 0;
+  padding: 0 0 25px 0; 
+}
+
+.project-collection h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.project-collection h3 {
+  color: black;
+  font-family: 'Ysabeau', sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 0;
+  margin-top: 0;
+  background: white;
+  letter-spacing: 2.5px;
+}
+
+.project-description p {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: .9rem;
+  text-align: justify;
+  border: 1px solid black;
+  padding: 20px 30px;
+}
+
+.project-collection button {
+  color: white;
+  background: rgb(161, 177, 172);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 100;
+  border: none;
+  padding: 10px 30px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.photo-section {
+  display: grid;
+  grid-gap: 70px;
+}
+
+.photo-section .photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+  size: cover;
+  cursor: pointer;
+}
+
+/*-- Items --*/
+.collection-item {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+/*-- Image Gallery Animation --*/
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.show {
+  opacity: 1;
+}
+
+.image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content button{
+  background: transparent;
+  color: rgb(225, 228, 208);
+  font-size: 2em;
+  font-weight: lighter;
+}
 
 /*------------------------Contact------------------------*/
 
@@ -256,13 +781,143 @@ footer address {
 --------------------------Media Queries--------------------------
 ----------------------------------------------------------------*/
 
-@media (min-width: 640px) {
+@media screen and (min-width: 600px) {
+  /*-- Global --*/
 
+  .background-container{
+    height: 100vh;
+    background-image: url(/img/MarshfieldHome-11.jpg);
+    background-color: white;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    margin: 2rem;
+  }
+  
+  .navigation__button {
+    height: 4.4rem;
+    width: 4.4rem;
+    top: 2.2rem;
+    right: 4rem;
+  }
+
+  .navigation__icon{
+    top: 22%;
+  }
+  
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 1.7rem;
+  }
+
+  .navigation__icon::before {
+    top: -.55rem;
+  }
+  
+  .navigation__icon::after {
+    top: .55rem;
+  }
+
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 30%;
+  }
+
+  .navigation__list {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+  }
+
+  .heading-primary-main {
+    font-size: 5rem;
+    letter-spacing: 11px;
+    padding-bottom: 220px;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+}
+
+  /*-- About page --*/
+
+  .content-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .text-section p {
+    line-height: 1.8rem;
+    font-family: 'EB Garamond', serif;
+  }
+  
+  .text-section h4 {
+    color: black;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .photo-section img {
+    cursor: none;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*-- Projects page --*/
+
+  .collection-item {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 1;
+  }
+
+  .collection-item-project {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .photo-section {
+    grid-gap: 15px;
+  }
+
+  .photo-section img {
+    transform: scale(.9);
+  }
+
+  .gallery {
+    margin: 0 35px 0 35px;
+  }
+
+  .project-collection h2 {
+    font-size: 4rem;
+  }
+
+  .project-collection h3 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 786px) {
+}
+
+@media screen and (min-width: 1000px) {
+
+  
+}
 
 @media screen and (min-width: 1200px) {
-
-
-@media screen and (min-width: 768px) {
+}
 
 
 /* ==========================================================================
@@ -345,23 +1000,6 @@ footer address {
 
 .clearfix::after {
   clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================

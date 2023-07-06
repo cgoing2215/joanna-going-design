@@ -9,61 +9,134 @@
 
   <meta property="og:title" content="Joanna Going Design">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="/favicon_io/android-chrome-512x512.png" sizes="32x32" type="image/png" class="favicon">
   <script src="https://kit.fontawesome.com/1a52810ffb.js" crossorigin="anonymous"></script>
-  <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="/projects/css/style.css">
+  <script src="../js/script.js" defer></script>
 
   <!--Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Buda:wght@300&family=Cormorant+Garamond:wght@300&family=Kaisei+HarunoUmi&family=Noto+Serif+Display:wght@300&family=Shippori+Mincho&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=EB+Garamond&family=Lora&family=Nanum+Myeongjo&family=Quicksand:wght@300;500&family=Raleway:wght@100;400&family=Ysabeau:wght@1&display=swap" rel="stylesheet">
     
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+  <!------Navigation------>
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button gray-button">
+      <span class="navigation__icon"></span>
+    </label>
+    <div class="navigation__background">&nbsp;</div>
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="/index.html" class="navigation__link">Home</a></li>
+        <li class="navigation__item"><a href="/about/index.html" class="navigation__link">About</a></li>
+        <li class="navigation__item"><a href="/projects/index.html" class="navigation__link">Projects</a></li>
+        <li class="navigation__item"><a href="/contact/index.html" class="navigation__link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
   <!------Header Section------>
   <header>
     <div class="content-wrapper">
-      <h3><a href src="index.html" target ="_blank">Joanna Going Design</a></h3>
-      <div class="header-divider"></div>
-      <div class="nav-bar">
-        <nav>
-          <ul>
-            <li><a href src="../about/index.html" target ="_blank">About</a></li>
-            <li><a href src="../projects/index.html" target ="_blank">Projects</a></li>
-            <li><a href src="../contact/index.html" target ="_blank">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-        <div class="page-title">
-            <h1>Projects</h1>
-        </div>
+      <h3><a href="../index.html"> <img src="../logo/joanna-going-logo.png" alt="joanna going logo" class="logo"> Joanna Going Design</a></h3>
+      <hr class="header-divider gray-divider"> 
     </div>
   </header>
-  <main></main>
+  <section class="gallery">
+    <div class="project-collection chicago">
+      <div class="project-header">
+        <h2>Textured Glamour</h2>
+        <h3>Chicago Gold Coast</h3>
+      </div>
+      <div class="photo-section">
+        <img src="../img/1209family.6 copy.jpg" alt="modern living room" class="collection-item photo-image image fade-in" onclick="openImage(this)">
+        <img src="../img/1209family.4.jpg" alt="" class="photo-image image fade-in " onclick="openImage(this)">
+        <img src="../img/1209family.12 copy.jpg" alt="" class="photo-image image fade-in" onclick="openImage(this)">
+      </div>
+      <div>
+        <div id="image-modal" class="modal">
+          <div class="modal-content">
+            <button id="previous-btn"><</button>
+            <img id="modal-image" src="" alt="Expanded Image">
+            <span class="close" onclick="closeImage()">&times;</span>
+            <button id="next-btn">></button>
+          </div>
+        </div>
+      </div>
+      <a href="../project-goldcoast/index.html" class="fade-in"><button>See full project here </button></a>
+    </div>
+    <div class="project-collection marshfield">
+      <div class="project-header fade-in">
+        <h2>South Shore Retreat</h2>
+        <h3>Marshfield Hills, MA</h3>
+      </div>
+      <div class="photo-section">
+        <img src="../img/MarshfieldHome-7.jpg" alt="" class="photo-image image fade-in" onclick="openImage(this)">
+        <img src="../img/MarshfieldHome-44.jpg" alt="" class="photo-image image fade-in" onclick="openImage(this)">
+        <img src="../img/MarshfieldHome-13.jpg" alt="" class="collection-item photo-image image fade-in" onclick="openImage(this)">
+      </div>
+      <div>
+        <div id="image-modal" class="modal">
+          <div class="modal-content">
+            <button id="previous-btn"><</button>
+            <img id="modal-image" src="" alt="Expanded Image">
+            <span class="close" onclick="closeImage()">&times;</span>
+            <button id="next-btn">></button>
+          </div>
+        </div>
+      </div>
+      <a href="../project-marshfield/index.html" class="fade-in"><button>See full project here </button></a>
+    </div>
+    <div class="project-collection extra">
+      <div class="project-header fade-in">
+        <h2>Modern Loft</h2>
+        <h3>Chicago Loop</h3>
+      </div>
+      <div class="photo-section">
+        <img src="../img/mark-apt1.jpg" alt="" class="collection-item photo-image image fade-in" onclick="openImage(this)">
+        <img src="../img/mark-apt2.jpg" alt="" class="photo-image image fade-in" onclick="openImage(this)">
+        <img src="../img/mark-apt13.jpg" alt="" class="photo-image image fade-in" onclick="openImage(this)">
+      </div>
+      <div>
+        <div id="image-modal" class="modal">
+          <div class="modal-content">
+            <button id="previous-btn" onclick="navigate(direction)"><</button>
+            <img id="modal-image" src="" alt="Expanded Image">
+            <span class="close" onclick="closeImage()">&times;</span>
+            <button id="next-btn">></button>
+          </div>
+        </div>
+      </div>
+      <a href="../project-chicagoloft/index.html" class="fade-in"><button>See full project here </button></a>
+    </div>
+
+  </section>
 
   <footer>
-    <h2>Joanna Going Design</h2>
-    <address>
-      contact@joannagoingdesign.com <br>
-      (847) 840-2232
-    </address>
-    <div class="social-links">
-      <ul>
-        <li><a href src="https://www.facebook.com/joanna.johnsongoing">Facebook</a></li>
-        <li><a href src="https://www.instagram.com/joanna_going_design/">Instagram</a></li>
-        <li></li>
-      </ul>
-    </div>
-  </footer>
+    <footer class="footer">
+      <div class="social-icons">
+          <ul>
+              <li><a href="https://www.instagram.com/joanna_going_design/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://www.pinterest.com/jogoing/" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
+              <li><a href="https://www.facebook.com/joanna.johnsongoing" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+          </ul>
+      </div>
+      <h4>Joanna Going Design</h4>
+      <h5><a href = "mailto: joanna@joannagoingdesign.com">contact@joannagoingdesign.com</a></h5>
+    </footer>
+
+
+
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
