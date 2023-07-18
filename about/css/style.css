@@ -14,6 +14,11 @@ html {
     margin: 0;
     padding: 0;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
   
   textarea {
     resize: vertical;
@@ -39,16 +44,6 @@ html {
   
   h1, h2, h3, h4 {
     color: white;
-  }
-  
-  .background-container{
-    height: 150vh;
-    background-image: url(/img/MarshfieldHome-11.jpg);
-    background-color: white;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    margin: 2rem;
   }
   
   
@@ -92,7 +87,7 @@ html {
     top: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgb(196, 213, 208);
+    background-color: rgb(0, 0, 0);
     opacity: 0;
     width: 0;
     transition: all .7s;
@@ -301,15 +296,7 @@ html {
     text-align: center;
     margin: 0;
   }
-  
-  .header-divider {
-    border: none;
-    background: transparent;
-    height: 1px;
-    width: 80%;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
+
   
   @keyframes moveInLeft {
     0% {
@@ -340,20 +327,18 @@ html {
   footer {
     color: white;
     text-align: center;
-    line-height: 15px;
     font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 2px;
+    line-height: 15px;
     padding-bottom: 12px;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background:rgb(179, 192, 190);
-    border-top: 5px solid white;
+    margin: 0;
+    background:rgb(0, 0, 0);
   }
   
   footer h4 {
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 2px;
+    font-family: 'Ysabeau SC', sans-serif;
   }
   
   footer h5 {
@@ -390,12 +375,12 @@ html {
   /*------------------------About - Specific------------------------*/
   
   .about-page h2 {
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 3rem;
+    font-family: Antic Didone;
+    font-size: 2.2rem;
+    letter-spacing: 6px;
     font-weight: bold;
     text-align: left;
-    padding: 0 0 0 1rem;
-    margin: 0;
+    margin: 1rem 0 0 3rem;
     color: black;
     animation-name: moveInLeft;
     animation-duration: 4s;
@@ -406,25 +391,23 @@ html {
     font-family: 'Ysabeau', sans-serif;
     font-size: 2.1rem;
     text-align: left;
-    padding: 0 0 0 1rem;
-    margin-top: 0;
+    margin: 0 0 0 3rem;
     background: white;
     letter-spacing: 2.5px;
     animation-name: moveInRight;
     animation-duration: 4s;
   }
 
-  .text-section{
-    background:rgb(231, 232, 224);
-    margin: 1rem 2rem 5rem 2rem;
-    padding: 1rem 0 1rem 0;
+  .text-section {
+    margin: 0 2rem 1rem 2rem;
+    padding: 0;
   }
 
   .text-section p {
     line-height: 2.2rem;
     font-size: 1.2rem;
-    font-family: 'EB Garamond', serif;
-    margin: 2.2rem 2rem;
+    font-family: 'Quicksand', sans-serif;
+    margin: 2.2rem 1.2rem;
     animation-name: fadeIn;
     animation-duration: 2s;
     text-align: justify;
@@ -439,6 +422,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     padding: .8rem;
+    margin-top: 2rem;
     position: relative;
     cursor: auto;
     animation-name: fadeIn;
@@ -491,14 +475,6 @@ html {
       text-align: right;
     }
   
-    .heading-primary-main {
-      font-size: 5rem;
-      letter-spacing: 11px;
-      padding-bottom: 220px;
-      animation-name: moveInLeft;
-      animation-duration: 4s;
-  }
-  
     /*-- About page --*/
   
     .content-section {
@@ -512,7 +488,6 @@ html {
     .text-section p {
       line-height: 1.8rem;
       font-size: 1rem;
-      font-family: 'EB Garamond', serif;
       animation-name: fadeIn;
       animation-duration: 4s;
     }
@@ -531,8 +506,9 @@ html {
     }
 
     .photo-section .photo-image {
-      width: 16rem;
-      padding: 0 1rem 0 1rem;
+      width: 18rem;
+      padding: 0 1rem 0 3rem;
+      margin-top: 4rem;
     }
   
     .gallery {
@@ -551,7 +527,8 @@ html {
   @media screen and (min-width: 1000px) {
   
     .photo-section .photo-image {
-      width: 18rem;
+      width: 20rem;
+      margin-top: 6rem;
     }
 
     .extended-version {
@@ -564,7 +541,15 @@ html {
     
   }
   
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1225px) {
+      
+    .photo-section .photo-image {
+      margin-bottom: 4rem;
+    }
+
+    .text-section {
+      margin: 0 4rem 2rem 4rem;
+    }
   }
   
   

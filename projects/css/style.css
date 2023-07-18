@@ -15,6 +15,11 @@ html {
     padding: 0;
   }
   
+body {
+  margin: 0;
+  padding: 0;
+}
+
   textarea {
     resize: vertical;
   }
@@ -40,7 +45,7 @@ html {
   h1, h2, h3, h4 {
     color: white;
   }
-  
+
   /*------------------------Header------------------------*/
   /*-- Navigation --*/
   
@@ -80,7 +85,7 @@ html {
     top: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgb(196, 213, 208);
+    background-color: rgb(0, 0, 0);
     opacity: 0;
     width: 0;
     transition: all .7s;
@@ -290,14 +295,7 @@ html {
     margin: 0;
   }
   
-  .header-divider {
-    border: none;
-    background: transparent;
-    height: 1px;
-    width: 80%;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
+
   
   @keyframes moveInLeft {
     0% {
@@ -350,24 +348,30 @@ html {
   footer {
     color: white;
     text-align: center;
-    line-height: 15px;
     font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 2px;
+    line-height: 15px;
     padding-bottom: 12px;
     position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    background:rgb(179, 192, 190);
-    border-top: 5px solid white;
+    background:rgb(0, 0, 0);
   }
   
   footer h4 {
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 2px;
+    font-family: 'Ysabeau SC', sans-serif;
   }
-  
+
   footer h5 {
     font-size: 14px;
+  }
+
+  .footer div {
+    margin: 0;
+    padding: 0;
   }
   
   .social-icons ul {
@@ -409,12 +413,7 @@ html {
     height: 300px;
     margin: 0;
     padding: 0;
-    transform: scale(.9);
     object-fit: contain;
-  }
-
-  .gray-button {
-    background: rgba(161, 177, 172, 0.447);
   }
   
   .page-title h1 {
@@ -438,11 +437,14 @@ html {
   
   .project-collection {
     margin: 0;
+    padding-bottom: 2rem;
   }
   
   .project-collection h2 {
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 2rem;
+    font-family: Antic Didone;
+    font-size: 2.2rem;
+    letter-spacing: 6px;
+    margin: 1rem 0 0 3rem;
     font-weight: bold;
     text-align: left;
     padding: 0;
@@ -465,21 +467,20 @@ html {
     font-family: 'Nanum Myeongjo', serif;
     font-size: .9rem;
     text-align: justify;
-    border: 1px solid black;
     padding: 20px 30px;
   }
   
   .project-collection button {
     color: white;
-    background: rgb(161, 177, 172);
+    background: rgb(2, 2, 2);
     font-family: 'Quicksand', sans-serif;
     font-size: 1.15rem;
     font-weight: 100;
     border: none;
-    padding: 10px 30px;
+    padding: 1rem 2rem;
     width: 100%;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 1.5rem;
     margin-bottom: 20px;
   }
   
@@ -490,6 +491,8 @@ html {
     text-align: center;
     size: cover;
     cursor: pointer;
+    margin: 0;
+    padding: 15px 0;
   }
   
   /*-- Items --*/
@@ -598,7 +601,7 @@ html {
       background-size: cover;
       background-position: center center;
       width: 100%;
-      margin: 2rem;
+      margin: 0;
     }
     
     .navigation__button {
@@ -696,7 +699,7 @@ html {
     }
   
     .photo-section {
-      grid-gap: 15px;
+      grid-gap: 20px;
     }
   
     .gallery {
@@ -712,7 +715,7 @@ html {
     }
 
     .project-collection button {
-        margin-top: 18px;
+      margin-top: 2.5rem;
       }
   }
   

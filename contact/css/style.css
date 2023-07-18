@@ -14,6 +14,11 @@ html {
     margin: 0;
     padding: 0;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
   
   textarea {
     resize: vertical;
@@ -82,7 +87,7 @@ html {
     top: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgb(196, 213, 208);
+    background-color: rgb(0, 0, 0);
     opacity: 0;
     width: 0;
     transition: all .7s;
@@ -301,23 +306,6 @@ html {
     animation-duration: 4s;
   }
   
-  .title-section {
-    margin-top: 100px;
-    margin-bottom: 250px;
-  }
-  
-  .heading-primary-main {
-      display: block;
-      text-align: center;
-      font-family: 'Abhaya Libre', serif;
-      font-size: 4rem;
-      font-weight: lighter;
-      letter-spacing: 5px;
-      padding-bottom: 220px;
-      animation-name: moveInLeft;
-      animation-duration: 4s;
-  }
-  
   @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -342,190 +330,101 @@ html {
     }
   }
   
-  @keyframes moveInUp{
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-  
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-  }
-  
   /*------------------------Main Section------------------------*/
   
-  main p {
-    font-family: 'Kaisei HarunoUmi', serif;
-    text-align: justify;
-    font-size: 1.2em;
-    font-weight: light;
-    line-height: 35px;
-  }
-  
-  .home-page-statement {
-    margin: 3rem 10rem;
-    padding-right: 11rem;
-    text-align: center;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  .home-page-statement h2 {
-    color: #1E1E1E;
-    font-family: 'Abhaya Libre', serif;
-    font-size: 3rem;
-    font-weight: lighter;
-    letter-spacing: 1.2px;
-    text-align: left;
-  }
-  
-  .decorative-statement {
-    font-family: 'Antic Didone', serif;
-    color: #908A79;
-    font-size: 4rem;
-    letter-spacing: 1.5px;
-  }
-  
-  .homepage-main-three {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 3rem;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  .homepage-main-three h3 {
-    color: #FFF;
-    font-size: 4rem;
+  .contact-page h2 {
     font-family: Antic Didone;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-top: 0;
-    margin: 2rem 0 0 2rem;
+    font-size: 2.2rem;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    color: black;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
   }
   
-  .homepage-main-three p {
-    padding: 1rem 2rem .5rem 2rem;
+  .contact-page h3 {
+    color: black;
+    font-family: 'Ysabeau', sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0;
+    margin-top: 0;
+    background: white;
+    letter-spacing: 2.5px;
+    animation-name: moveInRight;
+    animation-duration: 4s;
+  }
+  
+  .photo-section .photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+    size: cover;
+    cursor: pointer;
+    margin-bottom: 3rem;
+  }
+
+  
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .text-section p {
+    line-height: 2rem;
     font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
-    letter-spacing: .1rem;
-    line-height: 2.1rem;
+    font-size: 1.2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
   }
   
-  /*-- ABOUT MAIN 1--*/
-  
-  .brown-block-behind {
-    background: #a9a497;
-    width: 30rem;
-    height: 33rem;
-    flex-shrink: 0;
-    animation-name: fadeIn;
-    animation-duration: 5s;
-  }
-  
-  .homepage-about-text {
-    background: #d2d1c7;
-    width: 31rem;
-    height: 25rem;
-    position: absolute;
-    left: 18%;
+  .text-section h4 {
+    color: black;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.7rem;
+    margin: 0;
     padding: 0;
   }
-  
-  .homepage-about-image img {
-    width: 27rem;
-    height: auto;
-    flex-shrink: 0;
-    animation-name: moveInUp;
-    animation-duration: 4s;
+
+  .text-section a {
+    color: black;
   }
   
-  /*-- PROJECT MAIN 2 --*/
-  
-  .beige-block-behind {
-    background: #DDDCCB;
-    width: 28rem;
-    height: 28rem;
-    flex-shrink: 0;
+  .gallery {
+    margin: 0 35px 0 35px;
     animation-name: fadeIn;
-    animation-duration: 5s;
-    position: relative;
-  }
-  
-  .homepage-project-text {
-    background: #bfbaac;
-    width: 30rem;
-    height: 25rem;
-    position: absolute;
-    right: 5%;
-    padding: 0;
-  }
-  
-  .homepage-project-image img {
-    width: 40rem;
-    height: auto;
-    flex-shrink: 0;
-    animation-name: moveInUp;
     animation-duration: 4s;
-    position: relative;
-    text-align: left;
   }
-  
-  /*-- CONTACT MAIN 2 --*/
-  
-  .camel-block-behind {
-    background: #e7e7e3;
-    width: 34rem;
-    height: 28rem;
-    flex-shrink: 0;
-    animation-name: fadeIn;
-    animation-duration: 5s;
-    position: relative;
-  }
-  
-  .homepage-contact-text {
-    background: #c8c7bf;
-    width: 28rem;
-    height: 22rem;
-    position: absolute;
-    left: 16%;
-    padding: 0;
-  }
-  
-  .homepage-contact-image img {
-    width: 27rem;
-    height: auto;
-    flex-shrink: 0;
-    animation-name: moveInUp;
-    animation-duration: 4s;
-    position: relative;
-    text-align: left;
-  }
-  
+
   /*------------------------Footer------------------------*/
   
   footer {
     color: white;
     text-align: center;
-    line-height: 15px;
     font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 2px;
+    line-height: 15px;
     padding-bottom: 12px;
     position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    background:rgb(179, 192, 190);
+    background:rgb(0, 0, 0);
     border-top: 5px solid white;
   }
   
   footer h4 {
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 2px;
+    font-family: 'Ysabeau SC', sans-serif;
   }
   
   footer h5 {
@@ -559,229 +458,21 @@ html {
   }
   
   
-  /*-------------------------------------Additional Pages----------------------------------*/
-  
-  /*------------------------About------------------------*/
-  
-  .page-title h1 {
-    font-family: 'Shippori Mincho', serif;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 2.2em;
-    margin: 0;
-    padding: 0;
-    animation-name: 'moveInLeft' 2s;
-  }
-  
-  .content-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .text-section p {
-    line-height: 1.8rem;
-    font-family: 'EB Garamond', serif;
-  }
-  
-  .text-section h4 {
-    color: black;
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .photo-section img {
-    cursor: none;
-    height: 300px;
-    margin: 0;
-    padding: 0;
-    transform: scale(.65);
-    object-fit: contain;
-  }
-  
-  .photo-section div {
-    padding: 0;
-    margin: 0;
-  }
-  
-  /*------------------------Projects------------------------*/
-  
-  
-  .gray-button {
-    background: rgba(161, 177, 172, 0.447);
-  }
-  
-  .page-title h1 {
-    padding: 0;
-    margin: 0;
-  }
-  
-  /*-- Image Gallery --*/
-  
-  .gallery {
-    margin: 0 35px 0 35px;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  .project-header {
-    margin-top: 15px;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  .project-collection {
-    margin: 0;
-    padding: 0 0 25px 0; 
-  }
-  
-  .project-collection h2 {
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    color: black;
-  }
-  
-  .project-collection h3 {
-    color: black;
-    font-family: 'Ysabeau', sans-serif;
-    font-size: 1.3rem;
-    text-align: left;
-    padding: 0;
-    margin-top: 0;
-    background: white;
-    letter-spacing: 2.5px;
-  }
-  
-  .project-description p {
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: .9rem;
-    text-align: justify;
-    border: 1px solid black;
-    padding: 20px 30px;
-  }
-  
-  .project-collection button {
-    color: white;
-    background: rgb(161, 177, 172);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 100;
-    border: none;
-    padding: 10px 30px;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 18px;
-  }
-  
-  .photo-section {
-    display: grid;
-    grid-gap: 70px;
-  }
-  
-  .photo-section .photo-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    text-align: center;
-    size: cover;
-    cursor: pointer;
-  }
-  
-  /*-- Items --*/
-  .collection-item {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  /*-- Image Gallery Animation --*/
-  
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in;
-  }
-  
-  .show {
-    opacity: 1;
-  }
-  
-  .image-container {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .modal-image {
-    max-width: 90%;
-    max-height: 90%;
-    width: auto;
-    height: auto;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .modal-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .modal-content button{
-    background: transparent;
-    color: rgb(225, 228, 208);
-    font-size: 2em;
-    font-weight: lighter;
-  }
-  
-  /*------------------------Contact------------------------*/
-  
   /*----------------------------------------------------------------
   --------------------------Media Queries--------------------------
   ----------------------------------------------------------------*/
   
   @media screen and (max-width: 312px) {
-    .project-collection h2 {
-        font-size: 1.3rem;
+    .contact-page h2 {
+        font-size: 1.5rem;
     }
 
-    .project-collection h3 {
+    .contact-page h3 {
         font-size: 1rem;
     }
 
     header h3 a {
-        font-size: .5rem;
+        font-size: 1rem;
     }
 
     .logo img {
@@ -842,16 +533,6 @@ html {
       text-align: right;
     }
   
-    .heading-primary-main {
-      font-size: 5rem;
-      letter-spacing: 11px;
-      padding-bottom: 220px;
-      animation-name: moveInLeft;
-      animation-duration: 4s;
-  }
-  
-    /*-- About page --*/
-  
     .content-section {
       display: flex;
       flex-direction: row;
@@ -861,61 +542,7 @@ html {
       padding: 0;
     }
     
-    .text-section p {
-      line-height: 1.8rem;
-      font-family: 'EB Garamond', serif;
-    }
-    
-    .text-section h4 {
-      color: black;
-      font-family: 'Nanum Myeongjo', serif;
-      font-size: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .photo-section img {
-      cursor: none;
-      height: 50%;
-      margin: 0;
-      padding: 0;
-    }
   
-    /*-- Projects page --*/
-  
-    .collection-item {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 3;
-      grid-row-end: 1;
-    }
-  
-    .collection-item-project {
-      grid-column-start: 2;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
-  
-    .photo-section {
-      grid-gap: 15px;
-    }
-  
-    .photo-section img {
-      transform: scale(.9);
-    }
-  
-    .gallery {
-      margin: 0 35px 0 35px;
-    }
-  
-    .project-collection h2 {
-      font-size: 4rem;
-    }
-  
-    .project-collection h3 {
-      font-size: 2rem;
-    }
   }
   
   @media screen and (min-width: 786px) {

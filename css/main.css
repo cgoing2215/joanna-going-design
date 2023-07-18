@@ -43,12 +43,13 @@ h1, h2, h3, h4 {
 
 .background-container{
   height: 150vh;
-  background-image: url(/img/MarshfieldHome-11.jpg);
+  background-image: url(/img/_RP_7056\ darkcrop\ 2.jpeg);
+  background-position: center center;
   background-color: white;
   background-size: cover;
-  background-position: center center;
   width: 100%;
-  margin: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -61,7 +62,7 @@ h1, h2, h3, h4 {
 }
 
 .navigation__button {
-  background-color: rgba(255, 255, 255, 0.215);
+  background-color: rgba(255, 255, 255, 0);
   height: 2.9rem;
   width: 2.9rem;
   position: fixed;
@@ -87,12 +88,12 @@ h1, h2, h3, h4 {
 }
 
 .navigation__nav {
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgb(196, 213, 208);
+  background-color: rgb(0, 0, 0);
   opacity: 0;
   width: 0;
   transition: all .7s;
@@ -156,16 +157,16 @@ transform: scale(80);
 }
 
 .navigation__icon {
-  height: 1px;
-  background-color: black;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
   display: inline-block;
   transition: all .4s;
 }
 
 .navigation__icon::before, 
 .navigation__icon::after {
-  height: 1px;
-  background-color: black;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
   display: inline-block;
   transition: all .4s;
 }
@@ -173,7 +174,7 @@ transform: scale(80);
 .navigation__icon,
 .navigation__icon::before,
 .navigation__icon::after {
-  width: 1.5rem;
+  width: 1.8rem;
 }
 
 .navigation__icon::before, 
@@ -189,14 +190,14 @@ transform: scale(80);
 
 .navigation__icon::after {
   top: .48rem;
-  height: 1px;
+  height: 2px;
 }
 
 .navigation__button:hover .navigation__icon,
 .navigation__button:hover .navigation__icon::before,
 .navigation__button:hover .navigation__icon::after {
   width: 1.4rem;
-  background-color: rgb(248, 243, 243); 
+  background-color: rgb(255, 255, 255); 
 }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
@@ -217,36 +218,25 @@ transform: scale(80);
 
 .content-wrapper {
   padding-left: 5%;
-  padding-top: 15px;
   text-align: center;
 }
 
 .logo {
-  height: 30px;
-  width: 30px;
+  height: 70px;
+  width: 70px;
   background: transparent;
-  padding: 5px 10px 5px 5px;
-  margin: 0;
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  z-index: 9000;
-}
-
-header h3 {
-  text-align: start;
   padding: 0;
   margin: 0;
-  animation-name: fadeIn;
-  animation-duration: 4s;
   z-index: 9000;
 }
 
-header h3 a {
-  font-family: 'Ysabeau', sans-serif;
-  color: black;
-  font-weight: 300;
+.title-section h1 {
+  font-family: 'Ysabeau SC', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
   text-decoration: none;
-  font-size: 1.3em;
+  text-align: center;
+  font-size: 4em;
   padding: 0;
 }
 
@@ -297,35 +287,16 @@ header nav ul li a {
 /*-- Main Header --*/
 
 header {
-  padding: 15px 0;
   text-align: center;
+  padding-top: 5px;
   margin: 0;
 }
 
-.header-divider {
-  border: none;
-  background: transparent;
-  height: 1px;
-  width: 80%;
-  animation-name: fadeIn;
-  animation-duration: 4s;
-}
-
 .title-section {
-  margin-top: 100px;
+  margin-top: 250px;
   margin-bottom: 250px;
-}
-
-.heading-primary-main {
-    display: block;
-    text-align: center;
-    font-family: 'Abhaya Libre', serif;
-    font-size: 4rem;
-    font-weight: lighter;
-    letter-spacing: 5px;
-    padding-bottom: 220px;
-    animation-name: moveInLeft;
-    animation-duration: 4s;
+  animation-name: moveInLeft;
+  animation-duration: 4s;
 }
 
 @keyframes moveInLeft {
@@ -366,17 +337,8 @@ header {
 
 /*------------------------Main Section------------------------*/
 
-main p {
-  font-family: 'Kaisei HarunoUmi', serif;
-  text-align: justify;
-  font-size: 1.2em;
-  font-weight: light;
-  line-height: 35px;
-}
-
 .home-page-statement {
-  margin: 3rem 10rem;
-  padding-right: 11rem;
+  margin: 10rem 3rem;
   text-align: center;
   animation-name: fadeIn;
   animation-duration: 4s;
@@ -384,25 +346,21 @@ main p {
 
 .home-page-statement h2 {
   color: #1E1E1E;
-  font-family: 'Abhaya Libre', serif;
-  font-size: 3rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
   font-weight: lighter;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-align: left;
 }
 
 .decorative-statement {
-  font-family: 'Antic Didone', serif;
-  color: #908A79;
-  font-size: 4rem;
-  letter-spacing: 1.5px;
+  font-family: Antic Didone;
+  color: #9ba4a4;
+  font-size: 4.5rem;
+  letter-spacing: 1px;
 }
 
 .homepage-main-three {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   margin-bottom: 3rem;
   animation-name: fadeIn;
   animation-duration: 4s;
@@ -429,57 +387,34 @@ main p {
 
 /*-- ABOUT MAIN 1--*/
 
-.brown-block-behind {
-  background: #a9a497;
-  width: 30rem;
-  height: 33rem;
-  flex-shrink: 0;
-  animation-name: fadeIn;
-  animation-duration: 5s;
-}
-
 .homepage-about-text {
-  background: #d2d1c7;
-  width: 31rem;
+  background: #000000;
+  color: rgb(213, 210, 210);
   height: 25rem;
-  position: absolute;
-  left: 18%;
-  padding: 0;
+  padding-top: 1rem;
+  margin-right: 3rem;
 }
 
 .homepage-about-image img {
-  width: 27rem;
-  height: auto;
-  flex-shrink: 0;
+  height: 42rem;
+  margin: 2.5rem;
   animation-name: moveInUp;
   animation-duration: 4s;
 }
 
 /*-- PROJECT MAIN 2 --*/
 
-.beige-block-behind {
-  background: #DDDCCB;
-  width: 28rem;
-  height: 28rem;
-  flex-shrink: 0;
-  animation-name: fadeIn;
-  animation-duration: 5s;
-  position: relative;
-}
-
 .homepage-project-text {
-  background: #bfbaac;
-  width: 30rem;
-  height: 25rem;
-  position: absolute;
-  right: 5%;
-  padding: 0;
+  background: #000000;
+  color: rgb(213, 210, 210);
+  height: 24rem;
+  padding-top: 1rem;
+  margin-left: 3rem;
 }
 
 .homepage-project-image img {
-  width: 40rem;
+  width: 30rem;
   height: auto;
-  flex-shrink: 0;
   animation-name: moveInUp;
   animation-duration: 4s;
   position: relative;
@@ -488,29 +423,17 @@ main p {
 
 /*-- CONTACT MAIN 2 --*/
 
-.camel-block-behind {
-  background: #e7e7e3;
-  width: 34rem;
-  height: 28rem;
-  flex-shrink: 0;
-  animation-name: fadeIn;
-  animation-duration: 5s;
-  position: relative;
-}
-
 .homepage-contact-text {
-  background: #c8c7bf;
-  width: 28rem;
-  height: 22rem;
-  position: absolute;
-  left: 16%;
-  padding: 0;
+  background: #000000;
+  color: rgb(213, 210, 210);
+  height: 18rem;
+  padding-top: 1rem;
+  margin-right: 3rem;
 }
 
 .homepage-contact-image img {
-  width: 27rem;
+  width: 15rem;
   height: auto;
-  flex-shrink: 0;
   animation-name: moveInUp;
   animation-duration: 4s;
   position: relative;
@@ -522,20 +445,22 @@ main p {
 footer {
   color: white;
   text-align: center;
-  line-height: 15px;
   font-family: 'Nanum Myeongjo', serif;
+  letter-spacing: 2px;
+  line-height: 15px;
   padding-bottom: 12px;
   position: relative;
   bottom: 0;
   left: 0;
   right: 0;
-  background:rgb(179, 192, 190);
+  background:rgb(0, 0, 0);
   border-top: 5px solid white;
 }
 
 footer h4 {
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
+  font-family: 'Ysabeau SC', sans-serif;
 }
 
 footer h5 {
@@ -781,17 +706,116 @@ footer h5 :hover {
 --------------------------Media Queries--------------------------
 ----------------------------------------------------------------*/
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 538px){
+  .title-section h1 a{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 634px){
+  
+  .background-container{
+    width: 100%;
+    height: 40rem;
+  }
+
+  .title-section h1 {
+    font-size: 3rem;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .homepage-about-text {
+    position: relative;
+  }
+
+  .homepage-contact-image {
+    display: none;
+  }
+
+  .homepage-contact-text {
+    position: relative;
+  }
+
+  .homepage-project-image img {
+    display: none;
+  }
+
+  .homepage-project-text {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 635px) {
   /*-- Global --*/
 
+
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 8rem;
+  }
+
+  .homepage-main-three{
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 1rem;
+  }
+
+  .homepage-about-text {
+    background: #000000;
+    color: rgb(213, 210, 210);
+    width: 23rem;
+    height: 25rem;
+    position: relative;
+    left: 8%;
+    z-index: 1000;
+  }
+
+  .homepage-about-image img {
+    width: 27rem;
+    right: 10%;
+    height: auto;
+    position: relative;
+    flex-shrink: 1;
+    animation-name: moveInUp;
+    animation-duration: 4s;
+    z-index: 200;
+  }
+
+  .homepage-project-text {
+    background: #000000;
+    color: rgb(213, 210, 210);
+    width: 20rem;
+    height: 25rem;
+    padding: 0;
+  }
+
+  .homepage-contact-text {
+    background: #000000;
+    color: rgb(213, 210, 210);
+    width: 24rem;
+    height: 22rem;
+    padding: 0;
+  }
+
+  .homepage-about-image img {
+    z-index: 400;
+  }
+
+  .title-section h1 a {
+    font-size: 3.4rem;
+  }
+
   .background-container{
-    height: 100vh;
-    background-image: url(/img/MarshfieldHome-11.jpg);
+    height: 120vh;
     background-color: white;
     background-size: cover;
     background-position: center center;
     width: 100%;
-    margin: 2rem;
   }
   
   .navigation__button {
@@ -821,15 +845,6 @@ footer h5 :hover {
 
   .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
-    width: 30%;
-  }
-
-  .navigation__list {
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: right;
   }
 
   .heading-primary-main {
@@ -909,14 +924,33 @@ footer h5 :hover {
 }
 
 @media screen and (min-width: 786px) {
+
+  .navigation__list {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+  }
+
+  .navigation__checkbox:checked ~ .navigation__nav {
+    width: 30%;
+  }
+
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 950px) {
 
+  .background-container{
+    height: 120vh;
+  }
   
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
+  .background-container{
+    height: 140vh;
+  }
 }
 
 
