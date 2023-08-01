@@ -159,7 +159,7 @@ html {
   
   .navigation__icon::before, 
   .navigation__icon::after {
-    height: 1px;
+    height: 1.2px;
     background-color: black;
     display: inline-block;
     transition: all .4s;
@@ -222,8 +222,6 @@ html {
     background: transparent;
     padding: 5px 10px 5px 5px;
     margin: 0;
-    animation-name: fadeIn;
-    animation-duration: 4s;
     z-index: 9000;
   }
   
@@ -231,17 +229,17 @@ html {
     text-align: start;
     padding: 0;
     margin: 0;
+    z-index: 9000;
     animation-name: fadeIn;
     animation-duration: 4s;
-    z-index: 9000;
   }
   
   header h3 a {
     font-family: 'Ysabeau', sans-serif;
     color: black;
-    font-weight: 300;
+    font-weight: 100;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     padding: 0;
   }
   
@@ -332,6 +330,10 @@ html {
     line-height: 15px;
     padding-bottom: 12px;
     margin: 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background:rgb(0, 0, 0);
   }
   
@@ -389,7 +391,7 @@ html {
   .about-page h3 {
     color: black;
     font-family: 'Ysabeau', sans-serif;
-    font-size: 2.1rem;
+    font-size: 2rem;
     text-align: left;
     margin: 0 0 0 3rem;
     background: white;
@@ -418,7 +420,7 @@ html {
   }
   
   .photo-section .photo-image {
-    width: 50%;
+    width: 45%;
     left: 50%;
     transform: translateX(-50%);
     padding: .8rem;
@@ -506,8 +508,8 @@ html {
     }
 
     .photo-section .photo-image {
-      width: 18rem;
-      padding: 0 1rem 0 3rem;
+      width: 16rem;
+      padding: 1rem;
       margin-top: 4rem;
     }
   

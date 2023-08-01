@@ -157,7 +157,7 @@ body {
   
   .navigation__icon::before, 
   .navigation__icon::after {
-    height: 1px;
+    height: 1.2px;
     background-color: black;
     display: inline-block;
     transition: all .4s;
@@ -220,8 +220,6 @@ body {
     background: transparent;
     padding: 5px 10px 5px 5px;
     margin: 0;
-    animation-name: fadeIn;
-    animation-duration: 4s;
     z-index: 9000;
   }
   
@@ -229,17 +227,17 @@ body {
     text-align: start;
     padding: 0;
     margin: 0;
+    z-index: 9000;
     animation-name: fadeIn;
     animation-duration: 4s;
-    z-index: 9000;
   }
   
   header h3 a {
     font-family: 'Ysabeau', sans-serif;
     color: black;
-    font-weight: 300;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.2rem;
+    font-weight: 100;
     padding: 0;
   }
   
@@ -342,6 +340,27 @@ body {
     font-weight: light;
     line-height: 35px;
   }
+
+  .next-project {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .next-project button {
+    color: white;
+    background: rgb(2, 2, 2);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    border: none;
+    padding: .8rem 2rem;
+    margin: 1rem .5rem 2.5rem 1.5rem;
+    width: 90%;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
   
   /*------------------------Footer------------------------*/
   
@@ -437,7 +456,7 @@ body {
   
   .project-collection {
     margin: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   
   .project-collection h2 {
@@ -477,10 +496,10 @@ body {
     font-size: 1.15rem;
     font-weight: 100;
     border: none;
-    padding: 1rem 2rem;
+    padding: .8rem 2rem;
     width: 100%;
     cursor: pointer;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 20px;
   }
   
@@ -723,8 +742,6 @@ body {
   }
   
   @media screen and (min-width: 1000px) {
-  
-    
   }
   
   @media screen and (min-width: 1200px) {

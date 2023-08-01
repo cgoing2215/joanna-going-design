@@ -80,6 +80,14 @@ function handleKeyPress(event) {
   }
 }
 
+function handleKeyPress(event) {
+  if (event.keyCode === 37) {
+    navigateBackward()
+  } else if (event.keyCode === 39) {
+    navigateForward();
+  }
+}
+
 // Event listeners for previous and next buttons
 document.getElementById('previous-btn').addEventListener('click', function() {
   navigateBackward();
@@ -89,4 +97,13 @@ document.getElementById('next-btn').addEventListener('click', function() {
   navigateForward();
 });
 
+document.getElementById('modal-image').addEventListener('swipe', function() {
+  navigateBackward();
+});
+
+document.getElementById('modal-image').addEventListener('swipe', function() {
+  navigateForward();
+});
+
 document.addEventListener('keydown', handleKeyPress);
+document.addEventListener('swipe', handleKeyPress);

@@ -42,10 +42,6 @@ html {
     text-decoration: none;
   }
   
-  h1, h2, h3, h4 {
-    color: white;
-  }
-  
   
   /*------------------------Header------------------------*/
   
@@ -159,7 +155,7 @@ html {
   
   .navigation__icon::before, 
   .navigation__icon::after {
-    height: 1px;
+    height: 1.2px;
     background-color: black;
     display: inline-block;
     transition: all .4s;
@@ -239,9 +235,9 @@ html {
   header h3 a {
     font-family: 'Ysabeau', sans-serif;
     color: black;
-    font-weight: 300;
+    font-weight: 100;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     padding: 0;
   }
   
@@ -334,12 +330,12 @@ html {
   
   .contact-page h2 {
     font-family: Antic Didone;
-    font-size: 2.2rem;
+    font-size: 4rem;
     letter-spacing: 6px;
     font-weight: bold;
     text-align: left;
     padding: 0;
-    margin: 0;
+    margin: 1rem 0 0 3rem;
     color: black;
     animation-name: moveInLeft;
     animation-duration: 4s;
@@ -348,42 +344,31 @@ html {
   .contact-page h3 {
     color: black;
     font-family: 'Ysabeau', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: left;
-    padding: 0;
-    margin-top: 0;
+    margin: 1rem 0 0 3rem;
     background: white;
     letter-spacing: 2.5px;
     animation-name: moveInRight;
     animation-duration: 4s;
   }
-  
-  .photo-section .photo-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    text-align: center;
-    size: cover;
-    cursor: pointer;
-    margin-bottom: 3rem;
-  }
 
-  
   .content-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
   }
-  
+
   .text-section p {
     line-height: 2rem;
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: .2rem;
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin: 3rem 0 4.5rem 0;
   }
   
   .text-section h4 {
@@ -532,20 +517,12 @@ html {
       transform: translate(-50%, -50%);
       text-align: right;
     }
-  
-    .content-section {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
-    
-  
   }
   
-  @media screen and (min-width: 786px) {
+  @media screen and (min-width: 940px) {
+    .text-section p {
+      line-height: 2.2rem;
+    }
   }
   
   @media screen and (min-width: 1000px) {
