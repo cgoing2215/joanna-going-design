@@ -417,6 +417,18 @@ footer h5 :hover {
 
   /*-------------------------------------Projects - Specific----------------------------------*/
 
+  h2 {
+    font-family: Antic Didone;
+    font-size: 3rem;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-align: left;
+    margin: 1rem 0 0 3rem;
+    color: black;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+  }
+
   .photo-section {
     padding: 0;
     margin: 0;
@@ -454,16 +466,9 @@ footer h5 :hover {
     padding-bottom: 1rem;
   }
   
-  .project-collection h2 {
-    font-family: Antic Didone;
-    font-size: 2rem;
-    letter-spacing: 6px;
-    margin: 1rem 0 0 3rem;
-    font-weight: bold;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    color: black;
+  .bold {
+    color: #9ba4a4;
+    font-size: 1rem;
   }
   
   .project-collection h3 {
@@ -472,7 +477,7 @@ footer h5 :hover {
     font-size: 1.3rem;
     text-align: left;
     padding: 0;
-    margin-top: 0;
+    margin: 1rem 0 0 1rem;
     background: white;
     letter-spacing: 2.5px;
   }
@@ -559,6 +564,11 @@ footer h5 :hover {
     justify-content: center;
     align-items: center;
     height: 100%;
+  }
+
+  .swipe-area {
+    width: 300px;
+    height: 200px;
   }
   
   .close {
