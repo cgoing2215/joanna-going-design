@@ -42,11 +42,11 @@ h1, h2, h3, h4 {
 }
 
 .background-container{
-  height: 150vh;
   background-image: url(../img/MarshfieldHome-4.jpg);
   background-position: center center;
   background-color: white;
   background-size: cover;
+  height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -66,8 +66,8 @@ h1, h2, h3, h4 {
   height: 2.9rem;
   width: 2.9rem;
   position: fixed;
-  top: 5%;
-  right: 12%;
+  top: 3.2%;
+  right: 10%;
   border-radius: 50%;
   z-index: 2000;
   font-family: 'Nanum Myeongjo', serif;
@@ -217,7 +217,6 @@ transform: scale(80);
 /*-- Logo & Header --*/
 
 .content-wrapper {
-  padding-left: 5%;
   text-align: center;
 }
 
@@ -233,7 +232,7 @@ transform: scale(80);
 .title-section h1 {
   font-family: 'Ysabeau SC', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 100;
+  font-weight: 50;
   text-decoration: none;
   text-align: center;
   font-size: 4em;
@@ -302,7 +301,7 @@ header {
 @keyframes moveInLeft {
   0% {
       opacity: 0;
-      transform: translateX(-100px);
+      transform: translateX(-6rem);
   }
 
   100% {
@@ -314,7 +313,7 @@ header {
 @keyframes moveInRight{
   0% {
       opacity: 0;
-      transform: translateX(100px);
+      transform: translateX(6rem);
   }
 
   100% {
@@ -326,7 +325,7 @@ header {
 @keyframes moveInUp{
   0% {
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(6rem);
   }
 
   100% {
@@ -338,7 +337,7 @@ header {
 /*------------------------Main Section------------------------*/
 
 .home-page-statement {
-  margin: 10rem 3rem;
+  margin: 5rem 3rem;
   text-align: center;
   animation-name: fadeIn;
   animation-duration: 4s;
@@ -349,7 +348,7 @@ header {
   font-family: 'Ysabeau', sans-serif;
   font-size: 2.8rem;
   font-weight: lighter;
-  letter-spacing: 1px;
+  letter-spacing: .2rem;
   text-align: left;
 }
 
@@ -357,7 +356,7 @@ header {
   font-family: Antic Didone;
   color: #9ba4a4;
   font-size: 5.2rem;
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
 }
 
 .homepage-main-three {
@@ -372,25 +371,25 @@ header {
 .main-three-grouped {
   display: flex;
   flex-flow: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin: 3rem 0;
+  margin: 3.5rem 0;
   padding: 0;
 }
 
 .homepage-main-three h3 {
   color: #FFF;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: Antic Didone;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-top: 0;
-  margin: 2rem 0 0 2rem;
+  padding: 0 0 0 1.7rem;
+  margin: 2rem 0;
 }
 
 .homepage-main-three p {
-  padding: 1rem 2rem .5rem 2rem;
+  padding: 0 2rem .5rem 2rem;
   font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
   letter-spacing: .1rem;
@@ -413,35 +412,33 @@ header {
   animation-duration: 4s;
   position: relative;
   text-align: left;
-  padding: .5rem;
-  margin: .5rem;
 }
 
 /*------------------------Footer------------------------*/
-
+  
 footer {
   color: white;
   text-align: center;
   font-family: 'Nanum Myeongjo', serif;
-  letter-spacing: 2px;
-  line-height: 15px;
-  padding-bottom: 12px;
+  letter-spacing: .12rem;
+  line-height: .9rem;
+  padding-bottom: 1.2rem;
   position: relative;
   bottom: 0;
   left: 0;
   right: 0;
   background:rgb(0, 0, 0);
-  border-top: 5px solid white;
+  margin-top: 6rem;
 }
 
 footer h4 {
   font-size: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: .15rem;
   font-family: 'Ysabeau SC', sans-serif;
 }
 
 footer h5 {
-  font-size: 14px;
+  font-size: .8rem;
 }
 
 .social-icons ul {
@@ -449,12 +446,12 @@ footer h5 {
   flex-direction: row;
   justify-content: center;
   margin: 0;
-  padding: 20px 0 0 0;
+  padding: 1.25rem 0 0 0;
 }
 
 .social-icons li {
-  padding: 12px 12px 5px 12px;
-  font-size: 25px;
+  padding: .8rem .8rem .3rem .8rem;
+  font-size: 1.5rem;
 }
 
 .social-icons li :hover {
@@ -470,19 +467,34 @@ footer h5 :hover {
   color: rgb(200, 193, 193);
 }
 
-/*------------------------Contact------------------------*/
-
 /*----------------------------------------------------------------
 --------------------------Media Queries--------------------------
 ----------------------------------------------------------------*/
 
-@media screen and (max-width: 538px){
+@media screen and (max-width: 760px){
   .title-section h1 a{
     font-size: 2.5rem;
   }
 
-  .decorative-statement {
-    font-size: 3.5rem;
+  .home-page-statement h2 {
+    display: none;
+  }
+
+  .homepage-main-three div {
+    display: none;
+  }
+
+  
+  .main-three-grouped div {
+    display: none;
+  }
+
+  main {
+    display: none;
+  }
+
+  footer {
+    margin: 0;
   }
 }
 
@@ -490,7 +502,6 @@ footer h5 :hover {
   
   .background-container{
     width: 100%;
-    height: 40rem;
   }
 
   .title-section h1 {
@@ -500,20 +511,6 @@ footer h5 :hover {
   .logo {
     height: 50px;
     width: 50px;
-  }
-
-  .homepage-three-text {
-    position: relative;
-  }
-
-  .homepage-main-three {
-    display: flex;
-    flex-flow: column wrap;
-  }
-
-  .main-three-grouped {
-    display: flex;
-    flex-flow: column wrap;
   }
 }
 
@@ -555,7 +552,7 @@ footer h5 :hover {
   }
 
   .background-container{
-    height: 120vh;
+    height: 100vh;
     background-color: white;
     background-size: cover;
     background-position: center center;
@@ -565,8 +562,7 @@ footer h5 :hover {
   .navigation__button {
     height: 4.4rem;
     width: 4.4rem;
-    top: 2.2rem;
-    right: 4rem;
+    right: 6%;
   }
 
   .navigation__icon{
@@ -598,6 +594,11 @@ footer h5 :hover {
     animation-name: moveInLeft;
     animation-duration: 4s;
   }
+
+  .main-three-grouped {
+    justify-content: space-between;
+    width: 95%;
+  }
 }
 
 @media screen and (min-width: 786px) {
@@ -612,6 +613,15 @@ footer h5 :hover {
 
   .main-three-grouped {
     justify-content: space-between;
+    width: 90%;
+  }
+
+  .homepage-main-three h3 {
+    font-size: 4rem;
+  }
+
+  .homepage-three-image img {
+    width: 27rem;
   }
 
   .navigation__checkbox:checked ~ .navigation__nav {
@@ -620,17 +630,55 @@ footer h5 :hover {
 
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1000px) {
 
   .background-container{
-    height: 120vh;
+    height: 105vh;
   }
-  
+
+  .main-three-grouped {
+    justify-content: center;
+  }
+
+  .homepage-three-text {
+    margin: 0 2rem;
+    height: 24rem;
+    width: 24rem;
+  }
+
+  .homepage-three-image img {
+    margin: 0 2rem;
+    width: 32rem;
+  }
+
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
+
   .background-container{
-    height: 140vh;
+    height: 125vh;
+  }
+
+  .homepage-three-text {
+    margin: 0 3rem;
+  }
+
+  .homepage-three-image img {
+    margin: 0 3rem;
+    width: 34rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .homepage-three-text {
+    width: 26rem;
+    margin: 0 1rem;
+  }
+
+  .homepage-three-image img {
+    margin: 0 5rem;
+    width: 36rem;
   }
 }
 
@@ -710,7 +758,6 @@ footer h5 :hover {
 .clearfix::before,
 .clearfix::after {
   content: " ";
-  display: table;
 }
 
 .clearfix::after {
