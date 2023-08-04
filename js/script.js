@@ -54,7 +54,7 @@ function closeImage() {
   modal.style.display = 'none';
 }
 
-// Navigate through gallery of photos using arrows
+// Navigate through gallery 
 
 function navigateForward() {
   currentImageIndex++;
@@ -72,6 +72,8 @@ function navigateBackward() {
   openImage(photos[currentImageIndex]);
 }
 
+// using keydown event
+
 function handleKeyPress(event) {
   if (event.keyCode === 37) {
     navigateBackward()
@@ -80,7 +82,9 @@ function handleKeyPress(event) {
   }
 }
 
-// Event listeners for previous and next buttons
+document.addEventListener('keydown', handleKeyPress);
+
+// using click event for arrows
 document.getElementById('previous-btn').addEventListener('click', function() {
   navigateBackward();
 });
@@ -89,4 +93,43 @@ document.getElementById('next-btn').addEventListener('click', function() {
   navigateForward();
 });
 
-document.addEventListener('keydown', handleKeyPress);
+// using swipe event
+
+modal.addEventListener('touchstart', startTouch);
+modal.addEventListener('touchend', endTouch);
+modal.addEventListener('touchmove', moveTouch);
+
+
+let canSwipe = true;
+function moveTouch(e){
+  if(canSwipe){
+    // swipe left
+    if (e.deltaX > 50 && currentImageIndex !== ){
+      canSwipe = false;
+    }
+  }
+}
+
+
+
+
+
+
+function moveTouch(e){
+  e.preventDefault()
+}
+
+function startTouch(e){
+  initialStart = Date.now();
+  initialY = e.touches[0].clientY;
+
+}
+
+function endTouch(e){
+  initialEnd = Date.now();
+  endY = e.changedTouches[0].clientY;
+  if(initialEnd - initialStart < 800){
+    swipe()
+  }
+}
+

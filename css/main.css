@@ -15,6 +15,10 @@ html {
   padding: 0;
 }
 
+body {
+  display: inline;
+}
+
 textarea {
   resize: vertical;
 }
@@ -403,6 +407,7 @@ header {
   width: 20rem;
   padding: .5rem;
   margin: .5rem;
+  flex-grow: 0;
 }
 
 .homepage-three-image img {
@@ -412,6 +417,7 @@ header {
   animation-duration: 4s;
   position: relative;
   text-align: left;
+  flex-grow: 4;
 }
 
 /*------------------------Footer------------------------*/

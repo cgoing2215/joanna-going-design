@@ -7,12 +7,18 @@
 
 /*------------------------Global------------------------*/
 
+:root {
+  --app-height: 100%;
+}
+
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    height: var(--app-height);
   }
 
   body {
@@ -189,6 +195,11 @@ html {
     width: 1.4rem;
     background-color: rgb(248, 243, 243); 
   }
+
+  .navigation__link::before, 
+  .navigation__link::after {
+    pointer-events: none;
+  };
   
   .navigation__checkbox:checked + .navigation__button .navigation__icon {
     background: transparent;
