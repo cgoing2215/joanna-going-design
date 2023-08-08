@@ -1,35 +1,8 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 /*------------------------Global------------------------*/
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  display: inline;
-}
-
-textarea {
-  resize: vertical;
-}
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
 }
 
 ul {
@@ -39,10 +12,6 @@ ul {
 a {
   color: white;
   text-decoration: none;
-}
-
-h1, h2, h3, h4 {
-  color: white;
 }
 
 .background-container{
@@ -56,10 +25,60 @@ h1, h2, h3, h4 {
   padding: 0;
 }
 
+/*---- Page Animations ----*/
 
-/*------------------------Header------------------------*/
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
 
-/*-- Navigation --*/
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-6rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight{
+  0% {
+      opacity: 0;
+      transform: translateX(6rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInUp{
+  0% {
+      opacity: 0;
+      transform: translateY(6rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+/*------------------------Body------------------------*/
+/*---- Navigation ----*/
+
+.hidden {
+  display: none;
+}
 
 .navigation__checkbox {
   display: none;
@@ -103,10 +122,6 @@ h1, h2, h3, h4 {
   transition: all .7s;
 }
 
-.hidden {
-  display: none;
-}
-
 .navigation__list {
   position: absolute;
   top: 42%;
@@ -119,6 +134,16 @@ h1, h2, h3, h4 {
 
 .navigation__item {
   margin: 3rem;
+}
+
+.nav-option {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.nav-option:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .navigation__link:link, 
@@ -153,7 +178,7 @@ transform: scale(80);
   width: 100%;
 }
 
-/*-- Icon --*/
+/*------ Navigation Menu Icon ------*/
 
 .navigation__icon{
   position: relative;
@@ -218,76 +243,7 @@ transform: scale(80);
   top: 0;
 }
 
-/*-- Logo & Header --*/
-
-.content-wrapper {
-  text-align: center;
-}
-
-.logo {
-  height: 70px;
-  width: 70px;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  z-index: 9000;
-}
-
-.title-section h1 {
-  font-family: 'Ysabeau SC', sans-serif;
-  color: rgb(255, 255, 255);
-  font-weight: 50;
-  text-decoration: none;
-  text-align: center;
-  font-size: 4em;
-  padding: 0;
-}
-
-.nav-option {
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.nav-option:hover {
-  color: white;
-  cursor: pointer;
-}
-
-header nav ul {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-header nav ul li {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.4em;
-  font-weight: 300;
-  list-style: none;
-  display: inline;
-  padding: 10px 15px 20px 15px;
-}
-
-header nav ul li:hover {
-  color: rgb(255, 255, 255);
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.786);
-}
-
-@keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-
-  100% {
-      opacity: 1;
-  }
-}
-
-/*-- Main Header --*/
+/*--------- Header Section ---------*/
 
 header {
   text-align: center;
@@ -296,49 +252,35 @@ header {
 }
 
 .title-section {
-  margin-top: 250px;
+  margin-top: 225px;
   margin-bottom: 250px;
   animation-name: moveInLeft;
   animation-duration: 4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes moveInLeft {
-  0% {
-      opacity: 0;
-      transform: translateX(-6rem);
-  }
-
-  100% {
-      opacity: 1;
-      transform: translate(0);
-  }
+.title-section h1 {
+  font-family: 'Ysabeau SC', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 50;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0;
 }
 
-@keyframes moveInRight{
-  0% {
-      opacity: 0;
-      transform: translateX(6rem);
-  }
-
-  100% {
-      opacity: 1;
-      transform: translate(0);
-  }
+.logo {
+  height: 65px;
+  width: 65px;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes moveInUp{
-  0% {
-      opacity: 0;
-      transform: translateY(6rem);
-  }
-
-  100% {
-      opacity: 1;
-      transform: translate(0);
-  }
-}
-
-/*------------------------Main Section------------------------*/
+/*--------------- Main ---------------*/
+/*---- Tablet / Desktop Main ----*/
 
 .home-page-statement {
   margin: 5rem 3rem;
@@ -375,9 +317,9 @@ header {
 .main-three-grouped {
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 3.5rem 0;
+  flex-grow: 1;
   padding: 0;
 }
 
@@ -410,14 +352,18 @@ header {
   flex-grow: 0;
 }
 
+.homepage-three-image {
+  display: flex;
+}
+
 .homepage-three-image img {
   width: 25rem;
-  height: auto;
+  margin: 0 2rem;
   animation-name: moveInUp;
   animation-duration: 4s;
   position: relative;
   text-align: left;
-  flex-grow: 4;
+  flex-grow: 1;
 }
 
 /*------------------------Footer------------------------*/
@@ -463,11 +409,6 @@ footer h5 {
   color: rgb(177, 171, 171);
 }
 
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
 footer h5 :hover {
   color: rgb(200, 193, 193);
 }
@@ -475,10 +416,11 @@ footer h5 :hover {
 /*----------------------------------------------------------------
 --------------------------Media Queries--------------------------
 ----------------------------------------------------------------*/
+/*--- Tablet + (content appears) ---*/
+@media screen and (max-width: 768px){
 
-@media screen and (max-width: 760px){
-  .title-section h1 a{
-    font-size: 2.5rem;
+  .home-page-statement {
+    display: none;
   }
 
   .home-page-statement h2 {
@@ -489,7 +431,6 @@ footer h5 :hover {
     display: none;
   }
 
-  
   .main-three-grouped div {
     display: none;
   }
@@ -497,30 +438,32 @@ footer h5 :hover {
   main {
     display: none;
   }
-
-  footer {
-    margin: 0;
-  }
 }
 
-@media screen and (max-width: 634px){
-  
-  .background-container{
-    width: 100%;
+
+/*--- Regular Media Queries ---*/
+
+@media screen and (min-width: 515px){
+  .title-section h1{
+    text-align: center;
+    font-size: 3em;
+    padding: 0;
   }
 
-  .title-section h1 {
-    font-size: 3rem;
+  .title-section {
+    flex-direction: row;
+    margin-top: 250px;
   }
 
   .logo {
     height: 50px;
     width: 50px;
+    padding: 1rem 1rem 0 0;
   }
 }
 
 @media screen and (min-width: 635px) {
-  /*-- Global --*/
+  /*---- Nav ----*/
 
   .navigation__icon,
   .navigation__icon::before,
@@ -528,45 +471,9 @@ footer h5 :hover {
     width: 8rem;
   }
 
-  .homepage-three-text {
-    background: #000000;
-    color: rgb(213, 210, 210);
-    width: 23rem;
-    height: 23rem;
-    position: relative;
-    flex-shrink: 2;
-  }
-
-  .homepage-about-image img {
-    width: 27rem;
-    right: 10%;
-    height: auto;
-    position: relative;
-    flex-shrink: 1;
-    animation-name: moveInUp;
-    animation-duration: 4s;
-    z-index: 200;
-  }
-
-  .homepage-about-image img {
-    z-index: 400;
-  }
-
-  .title-section h1 a {
-    font-size: 3.4rem;
-  }
-
-  .background-container{
-    height: 100vh;
-    background-color: white;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-  }
-  
   .navigation__button {
-    height: 4.4rem;
-    width: 4.4rem;
+    height: 4rem;
+    width: 4rem;
     right: 6%;
   }
 
@@ -592,21 +499,32 @@ footer h5 :hover {
     opacity: 1;
   }
 
-  .heading-primary-main {
-    font-size: 5rem;
-    letter-spacing: 11px;
-    padding-bottom: 220px;
-    animation-name: moveInLeft;
-    animation-duration: 4s;
-  }
+  /*---- Main ----*/
 
   .main-three-grouped {
-    justify-content: space-between;
-    width: 95%;
+    width: 70%;
+  }
+
+  .homepage-three-text {
+    background: #000000;
+    color: rgb(213, 210, 210);
+    width: 23rem;
+    height: 23rem;
+    position: relative;
+    flex-grow: 0;
+    margin: 0 2rem;
+  }
+
+  .homepage-three-image img {
+    flex-grow: 1;
+  }
+
+  .title-section h1 {
+    font-size: 3.4rem;
   }
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
 
   .navigation__list {
     position: absolute;
@@ -617,20 +535,19 @@ footer h5 :hover {
   }
 
   .main-three-grouped {
-    justify-content: space-between;
-    width: 90%;
+    width: 100%;
   }
 
   .homepage-main-three h3 {
-    font-size: 4rem;
-  }
-
-  .homepage-three-image img {
-    width: 27rem;
+    font-size: 3rem;
   }
 
   .navigation__checkbox:checked ~ .navigation__nav {
     width: 30%;
+  }
+
+  footer {
+    margin-top: 4rem;
   }
 
 }
@@ -641,21 +558,10 @@ footer h5 :hover {
     height: 105vh;
   }
 
-  .main-three-grouped {
-    justify-content: center;
+  .home-page-statement h2 {
+    margin-left: 10%;
+    margin-right: 10%;
   }
-
-  .homepage-three-text {
-    margin: 0 2rem;
-    height: 24rem;
-    width: 24rem;
-  }
-
-  .homepage-three-image img {
-    margin: 0 2rem;
-    width: 32rem;
-  }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -664,26 +570,17 @@ footer h5 :hover {
     height: 125vh;
   }
 
-  .homepage-three-text {
-    margin: 0 3rem;
-  }
-
-  .homepage-three-image img {
-    margin: 0 3rem;
-    width: 34rem;
+  .home-page-statement h2 {
+    margin-left: 15%;
+    margin-right: 15%;
   }
 }
 
 @media screen and (min-width: 1400px) {
 
-  .homepage-three-text {
-    width: 26rem;
-    margin: 0 1rem;
-  }
-
-  .homepage-three-image img {
-    margin: 0 5rem;
-    width: 36rem;
+  .home-page-statement h2 {
+    margin-left: 20%;
+    margin-right: 20%;
   }
 }
 

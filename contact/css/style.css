@@ -1,237 +1,263 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 /*------------------------Global------------------------*/
 
-:root {
-  --app-height: 100%;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    height: var(--app-height);
-  }
+ul {
+  list-style: none;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  audio,
-  canvas,
-  iframe,
-  img,
-  svg,
-  video {
-    vertical-align: middle;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  
-  /*------------------------Header------------------------*/
-  
-  /*-- Navigation --*/
-  
-  .navigation__checkbox {
-    display: none;
-  }
-  
-  .navigation__button {
-    background-color: rgba(255, 255, 255, 0.215);
-    height: 2.9rem;
-    width: 2.9rem;
-    position: fixed;
-    top: 3.2%;
-    right: 10%;
-    border-radius: 50%;
-    z-index: 2000;
-    font-family: 'Nanum Myeongjo', serif;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .navigation__background {
-    height: 4.3rem;
-    width: 4.3rem;
-    border-radius: 50%;
-    position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
-    background-image: white;
-    z-index: 1000;
-    transition: transform .1s;
-  }
-  
-  .navigation__nav {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: rgb(0, 0, 0);
+a {
+  text-decoration: none;
+}
+
+/*---- Page Animations ----*/
+
+@keyframes fadeIn {
+0% {
     opacity: 0;
-    width: 0;
-    transition: all .7s;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .navigation__list {
-    position: absolute;
-    top: 42%;
-    left: 46%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding-right: 30px;
-    z-index: 100;
-  }
-  
-  .navigation__item {
-    margin: 3rem;
-  }
-  
-  .navigation__link:link, 
-  .navigation__link:visited {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: white;
-    text-decoration: none;
-    padding: 20px 20px;
-    font-family: 'Raleway', sans-serif;
-    border-bottom: .8px solid rgb(113, 114, 107);
-    letter-spacing: 5.5px;
-    background-size: 220%;
-    transition: all 1.4s;
-    animation-name: moveInRight;
-    animation-duration: 4s;
-  }
-  
-  .navigation__link:hover, 
-  .navigation__link:active {
-    color: black;
-    background: white;
-    background-position: 100%;
-  }
-  
-  .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(80);
-  }
-  
-  .navigation__checkbox:checked ~ .navigation__nav {
+}
+
+100% {
     opacity: 1;
-    width: 100%;
-  }
+}
+}
+
+@keyframes moveInLeft {
+0% {
+    opacity: 0;
+    transform: translateX(-6rem);
+}
+
+100% {
+    opacity: 1;
+    transform: translate(0);
+}
+}
+
+@keyframes moveInRight{
+0% {
+    opacity: 0;
+    transform: translateX(6rem);
+}
+
+100% {
+    opacity: 1;
+    transform: translate(0);
+}
+}
+
+@keyframes moveInUp{
+0% {
+    opacity: 0;
+    transform: translateY(6rem);
+}
+
+100% {
+    opacity: 1;
+    transform: translate(0);
+}
+}
+
+/*------------------------Body------------------------*/
+/*---- Navigation ----*/
   
-  /*-- Icon --*/
+   
+.hidden {
+  display: none;
+}
+
+.navigation__checkbox {
+  display: none;
+}
+
+.navigation__button {
+  background-color: rgba(255, 255, 255, 0.215);
+  height: 2.9rem;
+  width: 2.9rem;
+  position: fixed;
+  top: 3.2%;
+  right: 10%;
+  border-radius: 50%;
+  z-index: 2000;
+  font-family: 'Nanum Myeongjo', serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navigation__background {
+  height: 4.3rem;
+  width: 4.3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: white;
+  z-index: 1000;
+  transition: transform .1s;
+}
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  width: 0;
+  transition: all .7s;
+}
+
+.navigation__list {
+  position: absolute;
+  top: 42%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-right: 30px;
+  z-index: 100;
+}
+
+.navigation__item {
+  margin: 3rem;
+}
+
+.nav-option {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.nav-option:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.navigation__link:link, 
+.navigation__link:visited {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+  font-family: 'Raleway', sans-serif;
+  border-bottom: .8px solid rgb(113, 114, 107);
+  letter-spacing: .3em;
+  background-size: 220%;
+  transition: all 1.4s;
+  animation-name: moveInRight;
+  animation-duration: 4s;
+}
+
+.navigation__link:hover, 
+.navigation__link:active {
+  color: black;
+  background: white;
+  background-position: 100%;
+}
+
+.navigation__checkbox:checked ~ .navigation__background {
+transform: scale(80);
+}
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+}
+
+/*------ Navigation Menu Icon ------*/
+
+.navigation__icon{
+  position: relative;
+  top: 17%;
+}
+
+.navigation__icon {
+  height: 1px;
+  background-color: black;
+  display: inline-block;
+  transition: all .4s;
+}
+
+.navigation__icon::before, 
+.navigation__icon::after {
+  height: 1.2px;
+  background-color: black;
+  display: inline-block;
+  transition: all .4s;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 1.5rem;
+}
+
+.navigation__icon::before, 
+.navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.navigation__icon::before {
+  top: -.48rem;
+}
+
+.navigation__icon::after {
+  top: .48rem;
+  height: 1px;
+}
+
+.navigation__button:hover .navigation__icon,
+.navigation__button:hover .navigation__icon::before,
+.navigation__button:hover .navigation__icon::after {
+  width: 1.4rem;
+  background-color: rgb(248, 243, 243); 
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  transform: rotate(-135deg);
+  top: 0;
+}
   
-  .navigation__icon{
-    position: relative;
-    top: 17%;
-  }
+/*--------- Header Section ---------*/
   
-  .navigation__icon {
-    height: 1px;
-    background-color: black;
-    display: inline-block;
-    transition: all .4s;
-  }
-  
-  .navigation__icon::before, 
-  .navigation__icon::after {
-    height: 1.2px;
-    background-color: black;
-    display: inline-block;
-    transition: all .4s;
-  }
-  
-  .navigation__icon,
-  .navigation__icon::before,
-  .navigation__icon::after {
-    width: 1.5rem;
-  }
-  
-  .navigation__icon::before, 
-  .navigation__icon::after {
-    content: "";
-    position: absolute;
-    left: 0;
-  }
-  
-  .navigation__icon::before {
-    top: -.48rem;
-  }
-  
-  .navigation__icon::after {
-    top: .48rem;
-    height: 1px;
-  }
-  
-  .navigation__button:hover .navigation__icon,
-  .navigation__button:hover .navigation__icon::before,
-  .navigation__button:hover .navigation__icon::after {
-    width: 1.4rem;
-    background-color: rgb(248, 243, 243); 
+  header {
+    padding: 15px 0;
+    text-align: center;
+    margin: 0;
   }
 
-  .navigation__link::before, 
-  .navigation__link::after {
-    pointer-events: none;
-  };
-  
-  .navigation__checkbox:checked + .navigation__button .navigation__icon {
-    background: transparent;
-  }
-  
-  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
-    transform: rotate(135deg);
-    top: 0;
-  }
-  
-  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
-    transform: rotate(-135deg);
-    top: 0;
-  }
-  
-  /*-- Logo & Header --*/
-  
   .content-wrapper {
     padding-left: 5%;
     padding-top: 3.2%;
     text-align: center;
-  }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
   
   .logo {
     height: 30px;
     width: 30px;
-    background: transparent;
-    padding: 5px 10px 5px 5px;
+    padding: 10px 10px 5px 5px;
     margin: 0;
     animation-name: fadeIn;
     animation-duration: 4s;
-    z-index: 9000;
   }
   
   header h3 {
@@ -240,7 +266,6 @@ html {
     margin: 0;
     animation-name: fadeIn;
     animation-duration: 4s;
-    z-index: 9000;
   }
   
   header h3 a {
@@ -252,92 +277,7 @@ html {
     padding: 0;
   }
   
-  .nav-option {
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  
-  .nav-option:hover {
-    color: white;
-    cursor: pointer;
-  }
-  
-  header nav ul {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  header nav ul li {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.4em;
-    font-weight: 300;
-    list-style: none;
-    display: inline;
-    padding: 10px 15px 20px 15px;
-  }
-  
-  header nav ul li:hover {
-    color: rgb(255, 255, 255);
-  }
-  
-  header nav ul li a {
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.786);
-  }
-  
-  @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-  
-    100% {
-        opacity: 1;
-    }
-  }
-  
-  /*-- Main Header --*/
-  
-  header {
-    padding: 15px 0;
-    text-align: center;
-    margin: 0;
-  }
-  
-  .header-divider {
-    border: none;
-    background: transparent;
-    height: 1px;
-    width: 80%;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-  
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-  }
-  
-  @keyframes moveInRight{
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-  
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-  }
-  
-  /*------------------------Main Section------------------------*/
+/*--------------- Main ---------------*/
   
   .contact-page h2 {
     font-family: Antic Didone;
@@ -346,22 +286,23 @@ html {
     font-weight: bold;
     text-align: left;
     padding: 0;
-    margin: 1rem 0 0 1rem;
+    margin: 1rem 0 0 3rem;
     color: black;
     animation-name: moveInLeft;
-    animation-duration: 4s;
+    animation-duration: 3s;
   }
   
   .contact-page h3 {
     color: black;
     font-family: 'Ysabeau', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: left;
-    margin: 1rem 0 0 1rem;
+    padding-bottom: 1rem;
+    margin: 0 0 0 3rem;
     background: white;
     letter-spacing: 2.5px;
     animation-name: moveInRight;
-    animation-duration: 4s;
+    animation-duration: 3s;
   }
 
   .content-section {
@@ -374,20 +315,11 @@ html {
   }
 
   .text-section p {
-    line-height: 2rem;
     font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
+    line-height: 2rem;
     letter-spacing: .2rem;
     padding: 2rem;
     margin: 2rem 0;
-  }
-  
-  .text-section h4 {
-    color: black;
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 1.7rem;
-    margin: 0;
-    padding: 0;
   }
 
   .text-section a {
@@ -395,7 +327,6 @@ html {
   }
   
   .gallery {
-    margin: 0 35px 0 35px;
     animation-name: fadeIn;
     animation-duration: 4s;
   }
@@ -409,7 +340,7 @@ footer {
   letter-spacing: .12rem;
   line-height: .9rem;
   padding-bottom: 1.2rem;
-  position: absolute;
+  margin-top: 4rem;
   bottom: 0;
   left: 0;
   right: 0;
@@ -431,7 +362,7 @@ footer h5 {
   flex-direction: row;
   justify-content: center;
   margin: 0;
-  padding: 1.25rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
 
 .social-icons li {
@@ -457,49 +388,26 @@ footer h5 :hover {
   --------------------------Media Queries--------------------------
   ----------------------------------------------------------------*/
 
-  @media screen and (max-width: 300) {
-    header h3 a {
-      font-size: 1.1rem;
+  @media screen and (max-width: 312px) {
+    .project-collection h2 {
+        font-size: 1.3rem;
     }
   }
 
   @media screen and (max-width: 450px) {
     .contact-page h2 {
       font-size: 2rem;
-      letter-spacing: .2rem;
-      margin-left: 0;
-    }
-
-    .contact-page h3 {
-        font-size: 1.5rem;
-        margin-left: 0;
+      letter-spacing: .1rem;
     }
 
     .text-section p {
       font-size: .8rem;
-      letter-spacing: .04rem;
-      line-height: 1.8rem;
-    }
-
-    .logo img {
-        height: 22px;
-        width: 22px;
-        padding: 5px 10px 1px 5px;
+      letter-spacing: .1rem;
     }
   }
 
   @media screen and (min-width: 786px) {
-    /*-- Global --*/
-  
-    .background-container{
-      height: 100vh;
-      background-image: url(/img/MarshfieldHome-11.jpg);
-      background-color: white;
-      background-size: cover;
-      background-position: center center;
-      width: 100%;
-      margin: 2rem;
-    }
+    /*-- Nav --*/
     
     .navigation__button {
       height: 4.4rem;
@@ -537,20 +445,18 @@ footer h5 :hover {
       transform: translate(-50%, -50%);
       text-align: right;
     }
+
+    /*---- Main ----*/
+
+    .gallery {
+      margin: 0 35px 0 35px;
+    }
   }
   
   @media screen and (min-width: 940px) {
     .text-section p {
       line-height: 2.2rem;
     }
-  }
-  
-  @media screen and (min-width: 1000px) {
-  
-    
-  }
-  
-  @media screen and (min-width: 1200px) {
   }
   
   

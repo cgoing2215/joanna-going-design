@@ -20,6 +20,7 @@ const images = document.getElementsByClassName('image');
 const modal = document.getElementById('image-modal');
 const modalImage = document.getElementById('modal-image');
 const photos = document.querySelectorAll('.photo-section img')
+
 let currentImageIndex = 0;
 
 function openImage(image) {
@@ -54,7 +55,7 @@ function closeImage() {
   modal.style.display = 'none';
 }
 
-// Navigate through gallery 
+// Navigate through gallery of photos 
 
 function navigateForward() {
   currentImageIndex++;
@@ -72,7 +73,7 @@ function navigateBackward() {
   openImage(photos[currentImageIndex]);
 }
 
-// using keydown event
+// using keydown event through arrows
 
 function handleKeyPress(event) {
   if (event.keyCode === 37) {
@@ -82,9 +83,7 @@ function handleKeyPress(event) {
   }
 }
 
-document.addEventListener('keydown', handleKeyPress);
-
-// using click event for arrows
+// using previous and next buttons
 document.getElementById('previous-btn').addEventListener('click', function() {
   navigateBackward();
 });
@@ -93,43 +92,25 @@ document.getElementById('next-btn').addEventListener('click', function() {
   navigateForward();
 });
 
-// using swipe event
+document.addEventListener('keydown', handleKeyPress);
 
-modal.addEventListener('touchstart', startTouch);
-modal.addEventListener('touchend', endTouch);
-modal.addEventListener('touchmove', moveTouch);
+document.addEventListener('DOMContentLoaded', function() {
+  // using swipe events
 
-
-let canSwipe = true;
-function moveTouch(e){
-  if(canSwipe){
-    // swipe left
-    if (e.deltaX > 50 && currentImageIndex !== ){
-      canSwipe = false;
-    }
+  let touchstartX = 0
+  let touchendX = 0
+      
+  function checkDirection() {
+    if (touchendX < touchstartX) navigateBackward();
+    if (touchendX > touchstartX) navigateForward();
   }
-}
 
+  document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX
+  })
 
-
-
-
-
-function moveTouch(e){
-  e.preventDefault()
-}
-
-function startTouch(e){
-  initialStart = Date.now();
-  initialY = e.touches[0].clientY;
-
-}
-
-function endTouch(e){
-  initialEnd = Date.now();
-  endY = e.changedTouches[0].clientY;
-  if(initialEnd - initialStart < 800){
-    swipe()
-  }
-}
-
+  document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX
+    checkDirection()
+  })
+});

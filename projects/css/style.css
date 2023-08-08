@@ -1,53 +1,75 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 /*------------------------Global------------------------*/
 
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0;
-  }
-  
 body {
   margin: 0;
   padding: 0;
 }
+  
+ul {
+  list-style: none;
+}
 
-  textarea {
-    resize: vertical;
-  }
-  
-  audio,
-  canvas,
-  iframe,
-  img,
-  svg,
-  video {
-    vertical-align: middle;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  h1, h2, h3, h4 {
-    color: white;
-  }
+a {
+  text-decoration: none;
+}
 
-  /*------------------------Header------------------------*/
-  /*-- Navigation --*/
+/*---- Page Animations ----*/
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  
+  100% {
+      opacity: 1;
+  }
+  }
+  
+  @keyframes moveInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-6rem);
+  }
+  
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+  }
+  
+  @keyframes moveInRight{
+  0% {
+      opacity: 0;
+      transform: translateX(6rem);
+  }
+  
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+  }
+  
+  @keyframes moveInUp{
+  0% {
+      opacity: 0;
+      transform: translateY(6rem);
+  }
+  
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+  }
+  
+  /*------------------------Body------------------------*/
+  /*---- Navigation ----*/
+  
+ 
+  .hidden {
+    display: none;
+  }
   
   .navigation__checkbox {
     display: none;
@@ -91,10 +113,6 @@ body {
     transition: all .7s;
   }
   
-  .hidden {
-    display: none;
-  }
-  
   .navigation__list {
     position: absolute;
     top: 42%;
@@ -109,6 +127,16 @@ body {
     margin: 3rem;
   }
   
+  .nav-option {
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .nav-option:hover {
+    color: white;
+    cursor: pointer;
+  }
+  
   .navigation__link:link, 
   .navigation__link:visited {
     font-size: 1.5rem;
@@ -118,7 +146,7 @@ body {
     padding: 20px 20px;
     font-family: 'Raleway', sans-serif;
     border-bottom: .8px solid rgb(113, 114, 107);
-    letter-spacing: 5.5px;
+    letter-spacing: .3em;
     background-size: 220%;
     transition: all 1.4s;
     animation-name: moveInRight;
@@ -141,7 +169,7 @@ body {
     width: 100%;
   }
   
-  /*-- Icon --*/
+  /*------ Navigation Menu Icon ------*/
   
   .navigation__icon{
     position: relative;
@@ -205,164 +233,227 @@ body {
     transform: rotate(-135deg);
     top: 0;
   }
-  
-  /*-- Logo & Header --*/
-  
-  .content-wrapper {
-    padding-left: 5%;
-    padding-top: 3.2%;
-    text-align: center;
-  }
-  
-  .logo {
-    height: 30px;
-    width: 30px;
-    background: transparent;
-    padding: 5px 10px 5px 5px;
-    margin: 0;
-    z-index: 9000;
-  }
-  
-  header h3 {
-    text-align: start;
-    padding: 0;
-    margin: 0;
-    z-index: 9000;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  header h3 a {
-    font-family: 'Ysabeau', sans-serif;
-    color: black;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 100;
-    padding: 0;
-  }
-  
-  .nav-option {
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  
-  .nav-option:hover {
-    color: white;
-    cursor: pointer;
-  }
-  
-  header nav ul {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  header nav ul li {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.4em;
-    font-weight: 300;
-    list-style: none;
-    display: inline;
-    padding: 10px 15px 20px 15px;
-  }
-  
-  header nav ul li:hover {
-    color: rgb(255, 255, 255);
-  }
-  
-  header nav ul li a {
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.786);
-  }
-  
-  @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-  
-    100% {
-        opacity: 1;
-    }
-  }
-  
-  /*-- Main Header --*/
-  
-  header {
-    padding: 15px 0;
-    text-align: center;
-    margin: 0;
-  }
-  
 
-  
-  @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-  
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-  }
-  
-  @keyframes moveInRight{
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-  
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-  }
-  
-  @keyframes moveInUp{
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-  
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-  }
-  
-  /*------------------------Main Section------------------------*/
-  
-  main p {
-    font-family: 'Kaisei HarunoUmi', serif;
-    text-align: justify;
-    font-size: 1.2em;
-    font-weight: light;
-    line-height: 35px;
-  }
+/*--------- Header Section ---------*/
 
-  .next-project {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
+header {
+  padding: 15px 0;
+  text-align: center;
+  margin: 0;
+}
 
-  .next-project button {
-    color: white;
-    background: rgb(2, 2, 2);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
-    font-weight: 100;
-    border: none;
-    padding: .8rem 2rem;
-    margin: 2.2rem .5rem 2.5rem 1.5rem;
-    width: 90%;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
+.content-wrapper {
+  padding-left: 5%;
+  padding-top: 3.2%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  padding: 10px 10px 5px 5px;
+  margin: 0;
+  z-index: 9000;
+}
+
+header h3 {
+  text-align: start;
+  padding: 0;
+  margin: 0;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+header h3 a {
+  font-family: 'Ysabeau', sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 100;
+  padding: 0;
+}
+
+/*--------------- Main ---------------*/
+/*------ Projects Page ------*/
+
+h2 {
+  font-family: Antic Didone;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-align: left;
+  margin: 1rem 0 0 1rem;
+  color: black;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+}
+
+.photo-section {
+  padding: 0;
+  margin: 0;
+}
+
+.photo-section img {
+  cursor: none;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+}
+
+.gallery {
+  margin: 0 35px 0 35px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+.project-header {
+  margin-top: 15px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+.project-collection {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.project-location {
+  color: #9ba4a4;
+  font-size: 1rem;
+}
+
+.project-collection h3 {
+  color: black;
+  font-family: 'Ysabeau', sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 0;
+  margin: 1rem 0 1rem 1rem;
+  background: white;
+  letter-spacing: 2.5px;
+}
+
+.project-collection button {
+  color: white;
+  background: rgb(2, 2, 2);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 100;
+  border: none;
+  padding: .8rem 2rem;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 20px;
+}
+
+.photo-section .photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+  size: cover;
+  cursor: pointer;
+  margin: 0;
+  padding: 15px 0;
+}
+
+.collection-item {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+/*--- Modal Content ---*/
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+}
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content button{
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+/*------ Specific to Individual Project Pages ------*/
+
+.next-project {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.next-project button {
+  color: white;
+  background: rgb(2, 2, 2);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  border: none;
+  padding: .8rem 2rem;
+  margin: 2.2rem .5rem 2.5rem 1.5rem;
+  width: 90%;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.project-page-header {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.show {
+  opacity: 1;
+}
   
-  /*------------------------Footer------------------------*/
+/*------------------------Footer------------------------*/
     
 footer {
   color: white;
@@ -394,7 +485,7 @@ footer h5 {
   flex-direction: row;
   justify-content: center;
   margin: 0;
-  padding: 1.25rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
 
 .social-icons li {
@@ -415,348 +506,161 @@ footer h5 :hover {
   color: rgb(200, 193, 193);
 }
 
-  /*-------------------------------------Projects - Specific----------------------------------*/
-
-  h2 {
-    font-family: Antic Didone;
-    font-size: 3rem;
-    letter-spacing: 6px;
-    font-weight: bold;
-    text-align: left;
-    margin: 1rem 0 0 3rem;
-    color: black;
-    animation-name: moveInLeft;
-    animation-duration: 3s;
+/*----------------------------------------------------------------
+--------------------------Media Queries--------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 312px) {
+  .project-collection h2 {
+      font-size: 1.3rem;
   }
 
-  .photo-section {
-    padding: 0;
+  .project-collection h3 {
+      font-size: 1rem;
+  }
+
+  header h3 a {
+      font-size: 1.1rem;
+  }
+
+  .content-wrapper {
+    padding-top: 6%;
+  }
+
+  .logo {
+      height: 22px;
+      width: 22px;
+      padding: 5px 10px 1px 5px;
+    }
+
+  .project-collection button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /*-- Nav --*/
+
+  .navigation__button {
+    height: 4.4rem;
+    width: 4.4rem;
+    right: 6%;
+  }
+
+  .navigation__icon{
+    top: 22%;
+  }
+  
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 1.7rem;
+  }
+
+  .navigation__icon::before {
+    top: -.55rem;
+  }
+  
+  .navigation__icon::after {
+    top: .55rem;
+  }
+
+  /*---- Main ----*/
+
+  .heading-primary-main {
+    font-size: 5rem;
+    letter-spacing: 11px;
+    padding-bottom: 220px;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 0;
+    padding: 0;
+  }
+  
+  .text-section h4 {
+    color: black;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .text-section p {
+    line-height: 1.8rem;
+    font-family: 'EB Garamond', serif;
+  }
+  
+    .photo-section {
+      display: grid;
+      grid-gap: 5px;
   }
 
   .photo-section img {
     cursor: none;
-    height: 300px;
+    height: 50%;
     margin: 0;
     padding: 0;
-    object-fit: contain;
   }
-  
-  .page-title h1 {
-    padding: 0;
-    margin: 0;
+
+  .collection-item {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 1;
   }
-  
-  /*-- Image Gallery --*/
-  
+
+  .collection-item-project {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .photo-section {
+    grid-gap: 20px;
+  }
+
   .gallery {
     margin: 0 35px 0 35px;
-    animation-name: fadeIn;
-    animation-duration: 4s;
   }
-  
-  .project-header {
-    margin-top: 15px;
-    animation-name: fadeIn;
-    animation-duration: 4s;
+
+  .project-collection h2 {
+    font-size: 2.5rem;
   }
-  
-  .project-collection {
-    margin: 0;
-    padding-bottom: 1rem;
-  }
-  
-  .bold {
-    color: #9ba4a4;
-    font-size: 1rem;
-  }
-  
+
   .project-collection h3 {
-    color: black;
-    font-family: 'Ysabeau', sans-serif;
-    font-size: 1.3rem;
-    text-align: left;
-    padding: 0;
-    margin: 1rem 0 0 1rem;
-    background: white;
-    letter-spacing: 2.5px;
+    font-size: 1.5rem;
   }
-  
-  .project-description p {
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: .9rem;
-    text-align: justify;
-    padding: 20px 30px;
-  }
-  
+
   .project-collection button {
-    color: white;
-    background: rgb(2, 2, 2);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 100;
-    border: none;
-    padding: .8rem 2rem;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1rem;
-    margin-bottom: 20px;
+    margin-top: 2.5rem;
+    }
+
+  .next-project button {
+    margin: 3rem .5rem 2.5rem 1.5rem;
   }
-  
-  .photo-section .photo-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    text-align: center;
-    size: cover;
-    cursor: pointer;
-    margin: 0;
-    padding: 15px 0;
-  }
-  
-  /*-- Items --*/
-  .collection-item {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  /*-- Image Gallery Animation --*/
-  
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in;
-  }
-  
-  .show {
+}
+
+@media screen and (min-width: 786px) {
+  .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
-  }
-  
-  .image-container {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .modal-image {
-    max-width: 90%;
-    max-height: 90%;
-    width: auto;
-    height: auto;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .modal-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    width: 30%;
   }
 
-  .swipe-area {
-    width: 300px;
-    height: 200px;
-  }
-  
-  .close {
-    color: white;
+  .navigation__list {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
   }
-  
-  .modal-content button{
-    background: transparent;
-    color: rgb(225, 228, 208);
-    font-size: 2em;
-    font-weight: lighter;
-  }
-  
-  /*----------------------------------------------------------------
-  --------------------------Media Queries--------------------------
-  ----------------------------------------------------------------*/
-  @media screen and (max-width: 312px) {
-    .project-collection h2 {
-        font-size: 1.3rem;
-    }
-
-    .project-collection h3 {
-        font-size: 1rem;
-    }
-
-    header h3 a {
-        font-size: 1.1rem;
-    }
-
-    .content-wrapper {
-      padding-top: 6%;
-    }
-
-    .logo {
-        height: 22px;
-        width: 22px;
-        padding: 5px 10px 1px 5px;
-      }
-
-      .project-collection button {
-        font-size: 1rem;
-      }
-  }
-
-  @media screen and (min-width: 600px) {
-    /*-- Global --*/
-  
-    .background-container{
-      height: 100vh;
-      background-image: url(/img/MarshfieldHome-11.jpg);
-      background-color: white;
-      background-size: cover;
-      background-position: center center;
-      width: 100%;
-      margin: 0;
-    }
-    
-    .navigation__button {
-      height: 4.4rem;
-      width: 4.4rem;
-      right: 6%;
-    }
-  
-    .navigation__icon{
-      top: 22%;
-    }
-    
-    .navigation__icon,
-    .navigation__icon::before,
-    .navigation__icon::after {
-      width: 1.7rem;
-    }
-  
-    .navigation__icon::before {
-      top: -.55rem;
-    }
-    
-    .navigation__icon::after {
-      top: .55rem;
-    }
-  
-    .heading-primary-main {
-      font-size: 5rem;
-      letter-spacing: 11px;
-      padding-bottom: 220px;
-      animation-name: moveInLeft;
-      animation-duration: 4s;
-  }
-  
-    .content-section {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .text-section p {
-      line-height: 1.8rem;
-      font-family: 'EB Garamond', serif;
-    }
-    
-    .text-section h4 {
-      color: black;
-      font-family: 'Nanum Myeongjo', serif;
-      font-size: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .photo-section img {
-      cursor: none;
-      height: 50%;
-      margin: 0;
-      padding: 0;
-    }
-  
-    .photo-section {
-        display: grid;
-        grid-gap: 5px;
-    }
-
-    .collection-item {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      grid-row-start: 3;
-      grid-row-end: 1;
-    }
-  
-    .collection-item-project {
-      grid-column-start: 2;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
-  
-    .photo-section {
-      grid-gap: 20px;
-    }
-  
-    .gallery {
-      margin: 0 35px 0 35px;
-    }
-  
-    .project-collection h2 {
-      font-size: 2.5rem;
-    }
-  
-    .project-collection h3 {
-      font-size: 1.5rem;
-    }
-
-    .project-collection button {
-      margin-top: 2.5rem;
-      }
-
-    .next-project button {
-      margin: 3rem .5rem 2.5rem 1.5rem;
-    }
-  }
-  
-  @media screen and (min-width: 786px) {
-    .navigation__checkbox:checked ~ .navigation__nav {
-      opacity: 1;
-      width: 30%;
-    }
-  
-    .navigation__list {
-      position: absolute;
-      top: 42%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: right;
-    }
-  }
-  
-  @media screen and (min-width: 1000px) {
-  }
-  
-  @media screen and (min-width: 1200px) {
-  }
+}
   
   
   /* ==========================================================================
