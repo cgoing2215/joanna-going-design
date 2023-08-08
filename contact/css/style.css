@@ -1,7 +1,6 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
 /*------------------------Global------------------------*/
-
 body {
   margin: 0;
   padding: 0;
@@ -16,7 +15,6 @@ a {
 }
 
 /*---- Page Animations ----*/
-
 @keyframes fadeIn {
 0% {
     opacity: 0;
@@ -65,8 +63,6 @@ a {
 
 /*------------------------Body------------------------*/
 /*---- Navigation ----*/
-  
-   
 .hidden {
   display: none;
 }
@@ -170,7 +166,6 @@ transform: scale(80);
 }
 
 /*------ Navigation Menu Icon ------*/
-
 .navigation__icon{
   position: relative;
   top: 17%;
@@ -235,104 +230,101 @@ transform: scale(80);
 }
   
 /*--------- Header Section ---------*/
-  
-  header {
-    padding: 15px 0;
-    text-align: center;
-    margin: 0;
+header {
+  padding: 15px 0;
+  text-align: center;
+  margin: 0;
+}
+
+.content-wrapper {
+  padding-left: 5%;
+  padding-top: 3.2%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   }
 
-  .content-wrapper {
-    padding-left: 5%;
-    padding-top: 3.2%;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    }
-  
-  .logo {
-    height: 30px;
-    width: 30px;
-    padding: 10px 10px 5px 5px;
-    margin: 0;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  header h3 {
-    text-align: start;
-    padding: 0;
-    margin: 0;
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
-  
-  header h3 a {
-    font-family: 'Ysabeau', sans-serif;
-    color: black;
-    font-weight: 100;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0;
-  }
+.logo {
+  height: 30px;
+  width: 30px;
+  padding: 10px 10px 5px 5px;
+  margin: 0;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+header h3 {
+  text-align: start;
+  padding: 0;
+  margin: 0;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+header h3 a {
+  font-family: 'Ysabeau', sans-serif;
+  color: black;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0;
+}
   
 /*--------------- Main ---------------*/
-  
-  .contact-page h2 {
-    font-family: Antic Didone;
-    font-size: 3rem;
-    letter-spacing: 6px;
-    font-weight: bold;
-    text-align: left;
-    padding: 0;
-    margin: 1rem 0 0 3rem;
-    color: black;
-    animation-name: moveInLeft;
-    animation-duration: 3s;
-  }
-  
-  .contact-page h3 {
-    color: black;
-    font-family: 'Ysabeau', sans-serif;
-    font-size: 1.5rem;
-    text-align: left;
-    padding-bottom: 1rem;
-    margin: 0 0 0 3rem;
-    background: white;
-    letter-spacing: 2.5px;
-    animation-name: moveInRight;
-    animation-duration: 3s;
-  }
+.contact-page h2 {
+  font-family: Antic Didone;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-align: left;
+  padding: 0;
+  margin: 1rem 0 0 3rem;
+  color: black;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+}
 
-  .content-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
+.contact-page h3 {
+  color: black;
+  font-family: 'Ysabeau', sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  padding-bottom: 1rem;
+  margin: 0 0 0 3rem;
+  background: white;
+  letter-spacing: 2.5px;
+  animation-name: moveInRight;
+  animation-duration: 3s;
+}
 
-  .text-section p {
-    font-family: 'Quicksand', sans-serif;
-    line-height: 2rem;
-    letter-spacing: .2rem;
-    padding: 2rem;
-    margin: 2rem 0;
-  }
+.content-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
-  .text-section a {
-    color: black;
-  }
-  
-  .gallery {
-    animation-name: fadeIn;
-    animation-duration: 4s;
-  }
+.text-section p {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 2rem;
+  letter-spacing: .2rem;
+  padding: 2rem;
+  margin: 2rem 0;
+}
 
-  /*------------------------Footer------------------------*/
-  
+.text-section a {
+  color: black;
+}
+
+.gallery {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+/*------------------------Footer------------------------*/
 footer {
   color: white;
   text-align: center;
@@ -384,81 +376,78 @@ footer h5 :hover {
 }
   
   
-  /*----------------------------------------------------------------
-  --------------------------Media Queries--------------------------
-  ----------------------------------------------------------------*/
+/*----------------------------------------------------------------
+--------------------------Media Queries--------------------------
+----------------------------------------------------------------*/
+@media screen and (max-width: 312px) {
+  .project-collection h2 {
+      font-size: 1.3rem;
+  }
+}
 
-  @media screen and (max-width: 312px) {
-    .project-collection h2 {
-        font-size: 1.3rem;
-    }
+@media screen and (max-width: 450px) {
+  .contact-page h2 {
+    font-size: 2rem;
+    letter-spacing: .1rem;
   }
 
-  @media screen and (max-width: 450px) {
-    .contact-page h2 {
-      font-size: 2rem;
-      letter-spacing: .1rem;
-    }
+  .text-section p {
+    font-size: .8rem;
+    letter-spacing: .1rem;
+  }
+}
 
-    .text-section p {
-      font-size: .8rem;
-      letter-spacing: .1rem;
-    }
+@media screen and (min-width: 786px) {
+  /*-- Nav --*/
+  .navigation__button {
+    height: 4.4rem;
+    width: 4.4rem;
+    right: 6%;
   }
 
-  @media screen and (min-width: 786px) {
-    /*-- Nav --*/
-    
-    .navigation__button {
-      height: 4.4rem;
-      width: 4.4rem;
-      right: 6%;
-    }
-  
-    .navigation__icon{
-      top: 22%;
-    }
-    
-    .navigation__icon,
-    .navigation__icon::before,
-    .navigation__icon::after {
-      width: 1.7rem;
-    }
-  
-    .navigation__icon::before {
-      top: -.55rem;
-    }
-    
-    .navigation__icon::after {
-      top: .55rem;
-    }
-  
-    .navigation__checkbox:checked ~ .navigation__nav {
-      opacity: 1;
-      width: 30%;
-    }
-  
-    .navigation__list {
-      position: absolute;
-      top: 42%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: right;
-    }
-
-    /*---- Main ----*/
-
-    .gallery {
-      margin: 0 35px 0 35px;
-    }
+  .navigation__icon{
+    top: 22%;
   }
   
-  @media screen and (min-width: 940px) {
-    .text-section p {
-      line-height: 2.2rem;
-    }
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 1.7rem;
+  }
+
+  .navigation__icon::before {
+    top: -.55rem;
   }
   
+  .navigation__icon::after {
+    top: .55rem;
+  }
+
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 30%;
+  }
+
+  .navigation__list {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+  }
+
+  /*---- Main ----*/
+  .gallery {
+    margin: 0 35px 0 35px;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .text-section p {
+    line-height: 2.2rem;
+  }
+}
+
   
   /* ==========================================================================
      Helper classes

@@ -2,17 +2,17 @@
 const elements = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  elements.forEach(element => {
-    observer.observe(element);
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
   });
+}, { threshold: 0.15 });
+
+elements.forEach(element => {
+  observer.observe(element);
+});
 
 
 // Opens image upon click
@@ -29,7 +29,7 @@ function openImage(image) {
   currentIndex = Array.from(images).indexOf(image);
 }
 
-modalImage.onload = function() {
+modalImage.onload = function () {
   var modalWidth = modal.offsetWidth - 40; // Adjust for padding and borders
   var modalHeight = modal.offsetHeight - 40;
   var imageWidth = modalImage.naturalWidth;
@@ -59,7 +59,7 @@ function closeImage() {
 
 function navigateForward() {
   currentImageIndex++;
-  if (currentImageIndex >= photos.length){
+  if (currentImageIndex >= photos.length) {
     currentImageIndex = 0; // wrap around to the first image
   }
   openImage(photos[currentImageIndex]);
@@ -67,7 +67,7 @@ function navigateForward() {
 
 function navigateBackward() {
   currentImageIndex--;
-  if (currentImageIndex <0){
+  if (currentImageIndex < 0) {
     currentImageIndex = photos.length - 1;
   }
   openImage(photos[currentImageIndex]);
@@ -84,22 +84,22 @@ function handleKeyPress(event) {
 }
 
 // using previous and next buttons
-document.getElementById('previous-btn').addEventListener('click', function() {
+document.getElementById('previous-btn').addEventListener('click', function () {
   navigateBackward();
 });
 
-document.getElementById('next-btn').addEventListener('click', function() {
+document.getElementById('next-btn').addEventListener('click', function () {
   navigateForward();
 });
 
 document.addEventListener('keydown', handleKeyPress);
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // using swipe events
 
   let touchstartX = 0
   let touchendX = 0
-      
+
   function checkDirection() {
     if (touchendX < touchstartX) navigateBackward();
     if (touchendX > touchstartX) navigateForward();
