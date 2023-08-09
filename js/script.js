@@ -95,22 +95,3 @@ document.getElementById('next-btn').addEventListener('click', function () {
 document.addEventListener('keydown', handleKeyPress);
 
 document.addEventListener('DOMContentLoaded', function () {
-  // using swipe events
-
-  let touchstartX = 0
-  let touchendX = 0
-
-  function checkDirection() {
-    if (touchendX < touchstartX) navigateBackward();
-    if (touchendX > touchstartX) navigateForward();
-  }
-
-  document.addEventListener('touchstart', e => {
-    touchstartX = e.changedTouches[0].screenX
-  })
-
-  document.addEventListener('touchend', e => {
-    touchendX = e.changedTouches[0].screenX
-    checkDirection()
-  })
-});
