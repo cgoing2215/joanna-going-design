@@ -94,4 +94,3 @@ document.getElementById('next-btn').addEventListener('click', function () {
 
 document.addEventListener('keydown', handleKeyPress);
 
-document.addEventListener('DOMContentLoaded', function () {
