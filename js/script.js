@@ -15,15 +15,14 @@ elements.forEach(element => {
 });
 
 // Navigation links 
-
 const navOptionLinks = document.querySelector(".navigation__link")
 const navigationList = document.querySelector(".navigation__nav")
 
-if (navigationList.classList.contains('hidden')){
-  navOptionLinks.classList.add('inactive-link');
-} else {
-  navOptionLinks.classList.remove('inactive-link');
-}
+  if (navigationList.classList.contains('hidden')){
+    navOptionLinks.classList.add('inactive-link');
+  } else {
+    navOptionLinks.classList.remove('inactive-link');
+  };
 
 
 // Opens image upon click

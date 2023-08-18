@@ -76,10 +76,6 @@ a {
 /*------------------------Body------------------------*/
 /*---- Navigation ----*/
 
-.hidden {
-  display: none;
-}
-
 .inactive-link {
   pointer-events: none;
   cursor: none;

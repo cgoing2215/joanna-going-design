@@ -297,7 +297,7 @@ header h3 a {
 }
 
 .text-section {
-  margin: 0 2rem 4rem 2rem;
+  margin: 0 1.7rem 4rem 1.7rem;
   padding: 0;
 }
 
@@ -383,6 +383,10 @@ footer h5 :hover {
   .text-section p {
     margin: 0 1rem;
   }
+
+  .about-page h2 {
+    margin: 1rem 0 0 2.25rem;
+  }
 }
 
 @media screen and (min-width: 786px) {
@@ -436,7 +440,7 @@ footer h5 :hover {
   .text-section p {
     animation-name: fadeIn;
     animation-duration: 4s;
-    margin: 1.8rem;
+    margin: 1rem;
   }
   
   .text-section h4 {
