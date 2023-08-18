@@ -14,11 +14,22 @@ elements.forEach(element => {
   observer.observe(element);
 });
 
+// Navigation links 
+
+const navOptionLinks = document.querySelector(".navigation__link")
+const navigationList = document.querySelector(".navigation__nav")
+
+if (navigationList.classList.contains('hidden')){
+  navOptionLinks.classList.add('inactive-link');
+} else {
+  navOptionLinks.classList.remove('inactive-link');
+}
+
 
 // Opens image upon click
-const images = document.getElementsByClassName('image');
-const modal = document.getElementById('image-modal');
-const modalImage = document.getElementById('modal-image');
+const images = document.querySelector('.image');
+const modal = document.querySelector('#image-modal');
+const modalImage = document.querySelector('#modal-image');
 const photos = document.querySelectorAll('.photo-section img')
 
 let currentImageIndex = 0;
@@ -30,19 +41,19 @@ function openImage(image) {
 }
 
 modalImage.onload = function () {
-  var modalWidth = modal.offsetWidth - 40; // Adjust for padding and borders
-  var modalHeight = modal.offsetHeight - 40;
-  var imageWidth = modalImage.naturalWidth;
-  var imageHeight = modalImage.naturalHeight;
+  let modalWidth = modal.offsetWidth - 40; // Adjust for padding and borders
+  let modalHeight = modal.offsetHeight - 40;
+  let imageWidth = modalImage.naturalWidth;
+  let imageHeight = modalImage.naturalHeight;
 
   if (imageWidth > modalWidth) {
-    var widthRatio = modalWidth / imageWidth;
+    let widthRatio = modalWidth / imageWidth;
     imageWidth *= widthRatio;
     imageHeight *= widthRatio;
   }
 
   if (imageHeight > modalHeight) {
-    var heightRatio = modalHeight / imageHeight;
+    let heightRatio = modalHeight / imageHeight;
     imageWidth *= heightRatio;
     imageHeight *= heightRatio;
   }
@@ -84,11 +95,11 @@ function handleKeyPress(event) {
 }
 
 // using previous and next buttons
-document.getElementById('previous-btn').addEventListener('click', function () {
+document.querySelector('#previous-btn').addEventListener('click', function () {
   navigateBackward();
 });
 
-document.getElementById('next-btn').addEventListener('click', function () {
+document.querySelector('#next-btn').addEventListener('click', function () {
   navigateForward();
 });
 

@@ -80,6 +80,11 @@ a {
   display: none;
 }
 
+.inactive-link {
+  pointer-events: none;
+  cursor: none;
+}
+
 .navigation__checkbox {
   display: none;
 }
@@ -160,6 +165,10 @@ a {
   transition: all 1.4s;
   animation-name: moveInRight;
   animation-duration: 4s;
+}
+
+.navigation_item {
+  margin: 3rem;
 }
 
 .navigation__link:hover, 
@@ -350,6 +359,10 @@ header {
   padding: .5rem;
   margin: .5rem;
   flex-grow: 0;
+}
+
+.homepage-main-three a:hover{
+  color: rgb(177, 171, 171);
 }
 
 .homepage-three-image {

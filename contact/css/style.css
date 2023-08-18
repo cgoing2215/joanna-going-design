@@ -279,7 +279,7 @@ header h3 a {
   font-weight: bold;
   text-align: left;
   padding: 0;
-  margin: 1rem 0 0 3rem;
+  margin: 1rem 0 0 rem;
   color: black;
   animation-name: moveInLeft;
   animation-duration: 3s;
