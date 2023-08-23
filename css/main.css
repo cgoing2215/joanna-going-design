@@ -15,11 +15,11 @@ a {
 }
 
 .background-container{
-  background-image: url(../img/MarshfieldHome-4.jpg);
+  background-image: url(../img/_RP_7071.jpg);
   background-position: center center;
   background-color: white;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -599,10 +599,6 @@ footer h5 :hover {
 
   .background-container{
     height: 125vh;
-  }
-
-  .title-section {
-    margin-top: 400px;
   }
 
   .home-page-statement h2 {

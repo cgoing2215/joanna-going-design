@@ -375,10 +375,12 @@ h2 {
 
 #previous-btn {
   background: black;
+  border: none;
 }
 
 #next-btn {
   background: black;
+  border: none;
 }
 
 .modal {
@@ -661,6 +663,10 @@ footer h5 :hover {
 @media screen and (min-width: 860px) {
   .gallery {
     margin: 0 3rem 0 3rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
   }
 }
 

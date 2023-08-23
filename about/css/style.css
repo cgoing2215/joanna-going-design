@@ -467,9 +467,13 @@ footer h5 :hover {
   }
 }
 
-@media screen and (min-width: 845px){
+@media screen and (min-width: 860px){
   .photo-section .photo-image {
     display: block;
+  }
+
+  .about-page h2 {
+    font-size: 3.5rem;
   }
 }
 

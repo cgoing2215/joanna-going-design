@@ -442,6 +442,12 @@ footer h5 :hover {
   }
 }
 
+@media screen and (min-width: 860px){
+  .contact-page h2 {
+    font-size: 3.5rem;
+  }
+}
+
 @media screen and (min-width: 940px) {
   .text-section p {
     line-height: 2.2rem;
