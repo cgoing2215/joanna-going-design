@@ -543,6 +543,15 @@ footer h5 :hover {
     text-align: right;
   }
 
+  .title-section h1 {
+    font-size: 4rem;
+  }
+
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+
   .main-three-grouped {
     width: 100%;
   }
@@ -567,6 +576,19 @@ footer h5 :hover {
     height: 105vh;
   }
 
+  .title-section {
+    margin-top: 300px;
+  }
+
+  .title-section h1 {
+    font-size: 5rem;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
   .home-page-statement h2 {
     margin-left: 10%;
     margin-right: 10%;
@@ -577,6 +599,10 @@ footer h5 :hover {
 
   .background-container{
     height: 125vh;
+  }
+
+  .title-section {
+    margin-top: 400px;
   }
 
   .home-page-statement h2 {
