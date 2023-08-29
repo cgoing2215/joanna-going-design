@@ -258,7 +258,7 @@ header {
 }
 
 .title-section {
-  margin-top: 42%;
+  margin-top: 235px;
   margin-bottom: 250px;
   animation-name: moveInLeft;
   animation-duration: 4s;
@@ -271,7 +271,6 @@ header {
 .title-section h1 {
   font-family: 'Ysabeau SC', sans-serif;
   color: rgb(0, 0, 0);
-  font-weight: 50;
   text-decoration: none;
   text-align: center;
   font-size: 3rem;
@@ -458,7 +457,6 @@ footer h5 :hover {
 
   .title-section {
     flex-direction: row;
-    margin-top: 50%;
   }
 }
 
