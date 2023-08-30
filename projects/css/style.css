@@ -28,7 +28,7 @@ a {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-6rem);
+    transform: translateX(-2rem);
   }
 
   100% {
@@ -40,7 +40,7 @@ a {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(6rem);
+    transform: translateX(2rem);
   }
 
   100% {
@@ -282,11 +282,11 @@ header h3 a {
 
 h2 {
   font-family: Antic Didone;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 6px;
   font-weight: bold;
   text-align: left;
-  margin-top: 1rem;
+  margin: 1rem 0 0 1rem;
   margin-bottom: 0;
   color: black;
   animation-name: moveInLeft;
@@ -330,10 +330,10 @@ h2 {
 .project-collection h3 {
   color: black;
   font-family: 'Ysabeau', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: left;
   padding: 0;
-  margin: 1rem 0 1rem .5rem;
+  margin: 0 0 1rem 1rem;
   background: white;
   letter-spacing: 2.5px;
 }

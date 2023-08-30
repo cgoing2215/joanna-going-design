@@ -29,7 +29,7 @@ a {
 @keyframes moveInLeft {
 0% {
     opacity: 0;
-    transform: translateX(-6rem);
+    transform: translateX(-2rem);
 }
 
 100% {
@@ -41,7 +41,7 @@ a {
 @keyframes moveInRight{
 0% {
     opacity: 0;
-    transform: translateX(6rem);
+    transform: translateX(2rem);
 }
 
 100% {
@@ -275,7 +275,7 @@ header h3 a {
 /*--------------- Main ---------------*/
 .contact-page h2 {
   font-family: Antic Didone;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 6px;
   font-weight: bold;
   text-align: left;
@@ -292,7 +292,7 @@ header h3 a {
   font-size: 1.5rem;
   text-align: left;
   padding-bottom: 1rem;
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 2.5rem;
   background: white;
   letter-spacing: 2.5px;
   animation-name: moveInRight;
@@ -313,7 +313,7 @@ header h3 a {
   line-height: 2rem;
   letter-spacing: .2rem;
   padding: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .text-section a {
