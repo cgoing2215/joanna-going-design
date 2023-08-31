@@ -297,6 +297,7 @@ header h3 a {
   letter-spacing: 2.5px;
   animation-name: moveInRight;
   animation-duration: 3s;
+  font-weight: lighter;
 }
 
 .content-section {

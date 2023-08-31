@@ -336,6 +336,7 @@ h2 {
   margin: 0 0 1rem 1rem;
   background: white;
   letter-spacing: 2.5px;
+  font-weight: lighter;
 }
 
 .project-collection button {
